@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Wilmette Institute</title>
+    <meta charset="UTF-8">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="../static/img/favicons/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="../static/img/favicons/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="../static/img/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../static/img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="../static/img/favicons/favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileImage" content="../static/img/favicons/mstile-144x144.png">
+    <meta name="msapplication-TileColor" content="#2b5797">
+
+    <!-- apple web app title -->
+    <meta name="application-name" content="Wilmette Institute">
+    <meta name="apple-mobile-web-app-title" content="Wilmette Institute">
+    <meta name="mobile-web-app-capable" content="Wilmette Institute">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../static/img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../static/img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../static/img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../static/img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../static/img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../static/img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../static/img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/img/favicons/apple-touch-icon-152x152.png">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap&subset=latin-ext"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/libs/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="../static/libs/css/jquery.formstyler.css">
+    <link rel="stylesheet" href="../static/libs/css/jquery.formstyler.theme.css">
+    <link rel="stylesheet" href="../static/libs/css/magnific-popup.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container-big">
+            <div class="flex-bl flex-justify-btw flex-align-center">
+                <div class="header__logo">
+                    <a href="/" class="">
+                        <img src="../static/img/logo.svg" alt="Wilmette Institute" class="logo-img logo-main">
+                        <img src="../static/img/logo-wi.svg" alt="Wilmette Institute" class="logo-img logo-small">
+                    </a>
+                </div>
+
+                <nav class="header__nav header_hidden" id="toggle-menu">
+                    <ul>
+                        <li class="no-desktop">
+                            <a href="#" class="header__nav__link header__nav__link_home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__nav__link header__nav__link_active header__nav__link_about">About
+                                Us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__nav__link header__nav__link_courses">Courses for University</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__nav__link header__nav__link_community">Community Courses</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__nav__link header__nav__link_articles">Articles & Videos</a>
+                        </li>
+                        <li class="no-desktop">
+                            <a href="#" class="header__nav__link header__nav__link_help">Help</a>
+                        </li>
+                    </ul>
+
+                    <div class="header__nav__btn no-tablet no-desktop">
+                        <a href="#" class="btn btn_pink btn_active">Sign In</a>
+                    </div>
+                </nav>
+
+                <div class="header__sblock">
+                    <a href="javascript:void(0)" class="header__sbtn js-toggle-header" data-toggle="search"></a>
+                </div>
+
+                <div class="header__signin no-mobile">
+                    <a href="#" class="btn btn_pink btn_active">Sign In</a>
+                </div>
+
+                <div class="header__burger no-desktop">
+                    <a href="javascript:void(0)" class="mobile-burger js-toggle-header" data-toggle="menu"></a>
+                </div>
+
+                <div class="header__search header_hidden" id="toggle-search">
+                    <div class="container-big">
+                        <div class="flex-bl flex-justify-end flex-align-center">
+                            <div class="header__search__block">
+                                <form action="" method="">
+                                    <div class="search-block">
+                                        <input type="text" placeholder="Search for Courses, Articles, Faculty & more…"
+                                            class="search-input">
+                                        <button type="submit" class="search-btn"></button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="">
+                                <a href="javascript:void(0)" class="search-close js-close-search"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- /Header -->
+
+    <div
+        class="container-margin hero-banner hero-banner_background hero-banner_background-left hero-banner_background-purple hero-banner_about-us">
+        <div class="container hero-banner__info">
+            <h1 class="hero-banner__info-title title-h1">
+                Courses for University Credit
+            </h1>
+            <h4 class="hero-banner__info-subtitle title-h4">
+                Courses in Bahá'i Studies and Social Transformation to
+                explore the spiritual and material dimensions of holistic social change.
+            </h4>
+
+            <a href="#" class="btn btn_yellow">Browse Courses for University</a>
+            <a href="#" class="btn">Download our University Courses Brochure</a>
+        </div>
+
+        <div class="hero-banner__image">
+            <img src="../static/img/dev/hero-banner/banner.jpg" alt="hero-banner">
+        </div>
+    </div>
+
+
+    <div class="wi-infoblock wi-infoblock_2-items wi-infoblock wi-infoblock_in-courses-university">
+        <!-- if 2 items in row change class wi-infoblock_2-items -->
+        <!-- if 3 items in row change class wi-infoblock_3-items -->
+        <div class="container">
+
+            <div class="wi-infoblock__title">Why WI University Courses?</div>
+
+            <div class="wi-infoblock__subtitle no-mobile">
+                <p>
+                    The Wilmette Institute is not accredited, but it has a long history of
+                    students arranging for credit through their university or college. We are excited to reach out and
+                    form
+                    partnerships with universities around the world.
+                </p>
+            </div>
+
+            <div class="flex-bl">
+                <div class="wi-infoblock__item">
+                    <div class="wi-infoblock__item__title title-h2">Scholarship</div>
+                    <p class="wi-infoblock__item__desc">
+                        Hone your writing and research skills
+                    </p>
+                </div>
+                <div class="wi-infoblock__item">
+                    <div class="wi-infoblock__item__title title-h2">Critical Thinking</div>
+                    <p class="wi-infoblock__item__desc">
+                        Engage in solution-based awareness of issues that matter to you most
+                    </p>
+                </div>
+                <div class="wi-infoblock__item">
+                    <div class="wi-infoblock__item__title title-h2">Communication</div>
+                    <p class="wi-infoblock__item__desc">
+                        Create presentations and contribute to discourse right where you are
+                    </p>
+                </div>
+                <div class="wi-infoblock__item">
+                    <div class="wi-infoblock__item__title title-h2">Change Making</div>
+                    <p class="wi-infoblock__item__desc">
+                        Gain a global perspective
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wi-courses wi-courses_in-courses-university">
+        <div class="container">
+            <div class="title-h1 text-orange wi-courses__title">Upcoming Community Learning Courses</div>
+
+            <div class="small-cards flex-bl flex-justify-btw" id="js-small-cards">
+                <div class="small-cards__item">
+                    <a href="#">
+                        <div class="small-cards__img">
+                            <img src="../static/img/small-card-img.png" alt="wilmette">
+                        </div>
+                        <div class="small-cards__info">
+                            <span class="title-small small-cards__date">Feb 26 - Apr 14</span>
+                            <h5 class="title-h5 small-cards__title">Racial Justice in the U.S. Lorem Ipsum Dolor Sit
+                            </h5>
+                        </div>
+                        <div class="small-cards__tag small-cards__tag_comm">COMMUNITY</div>
+                    </a>
+                </div>
+                <div class="small-cards__item">
+                    <a href="#">
+                        <div class="small-cards__img">
+                            <img src="../static/img/small-card-img.png" alt="wilmette">
+                        </div>
+                        <div class="small-cards__info">
+                            <span class="title-small small-cards__date">Feb 26 - Apr 14</span>
+                            <h5 class="title-h5 small-cards__title">Social Change: Bahá’i Approaches</h5>
+                        </div>
+                        <div class="small-cards__tag small-cards__tag_comm">COMMUNITY</div>
+                    </a>
+                </div>
+                <div class="small-cards__item">
+                    <a href="#">
+                        <div class="small-cards__img">
+                            <img src="../static/img/small-card-img.png" alt="wilmette">
+                        </div>
+                        <div class="small-cards__info">
+                            <span class="title-small small-cards__date">Feb 26 - Apr 14</span>
+                            <h5 class="title-h5 small-cards__title">Social Tranformation: Community Building</h5>
+                        </div>
+                        <div class="small-cards__tag small-cards__tag_univer">FOR UNIVERSITY</div>
+                    </a>
+                </div>
+                <div class="small-cards__item">
+                    <a href="#">
+                        <div class="small-cards__img">
+                            <img src="../static/img/small-card-img.png" alt="wilmette">
+                        </div>
+                        <div class="small-cards__info">
+                            <span class="title-small small-cards__date">Feb 26 - Apr 14</span>
+                            <h5 class="title-h5 small-cards__title">Religion, Philosophy & Theology</h5>
+                        </div>
+                        <div class="small-cards__tag small-cards__tag_univer">FOR UNIVERSITY</div>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="#" class="btn">View All University Courses</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-margin description-block description-block_background description-block_in-courses-university"
+        data-expanded="false">
+        <div class="container">
+            <div class="description-block__title title-h1">Our Courses Will Inspire You to…</div>
+
+            <div class="description-block-body">
+                <div class="description-block-point">
+                    <div class="description-block-point__title">
+                        <h2>INVESTIGATE</h2>
+                    </div>
+                    <div class="description-block-point__desc">
+                        <p>
+                            Independently investigate reality to discern fact from conjecture.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="description-block-point">
+                    <div class="description-block-point__title">
+                        <h2>ANALYZE</h2>
+                    </div>
+                    <div class="description-block-point__desc">
+                        <p>
+                            Analyze complex and interrelated global problems through critical systems thinking.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="description-block-point">
+                    <div class="description-block-point__title">
+                        <h2>APPLY</h2>
+                    </div>
+                    <div class="description-block-point__desc">
+                        <p>
+                            Apply knowledge, insights and skills to one’s individual reality.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="description-block-point">
+                    <div class="description-block-point__title">
+                        <h2>EXPLORE</h2>
+                    </div>
+                    <div class="description-block-point__desc">
+                        <p>
+                            Explore the intricate connections between spiritual and material solutions to social issues
+                            through research, praxis, and use of the arts.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="description-block-point">
+                    <div class="description-block-point__title">
+                        <h2>BUILD COMMUNITY</h2>
+                    </div>
+                    <div class="description-block-point__desc">
+                        <p>
+                            Apply knowledge, insights and skills to community-building efforts, participatory social
+                            action, and social discourse, with the goal of both spiritual and material progress.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="description-block-point">
+                    <div class="description-block-point__title">
+                        <h2>ENGAGE</h2>
+                    </div>
+                    <div class="description-block-point__desc">
+                        <p>
+                            Engage in public discourse, consultation, service-learning, and consciousness-raising in
+                            interdisciplinary, interfaith, and intercultural contexts.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="no-tablet no-desktop">
+                    <a id="description-close" class="btn" href="javascript:void(0);">Show less</a>
+                </div>
+            </div>
+
+            <div class="description-block__button no-tablet  no-desktop">
+                <a id="description-open" class="btn" href="javascript:void(0);">Show more</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonials testimonials_in-courses-university">
+        <div class="container">
+            <div class="title-h1 testimonials__title text-white">Testimonials</div>
+
+            <div class="testimonials__list flex-bl flex-justify-btw">
+                <div class="testimonials__item">
+                    <p>
+                        ​The later units of the course (Mitigating Climate Change, Discourse about Climate Change, and
+                        Service and Social Action) have begun to reshape my thinking about what I can do as an
+                        individual, as a member of a community of faith, and as a member of the greater society to work
+                        to address the climate crisis.
+                    </p>
+                    <div class="testimonials__autor">
+                        <div class="testimonials__autor__name">Kelly Clarke</div>
+                        <div class="testimonials__autor__city no-mobile">California</div>
+                    </div>
+                </div>
+                <div class="testimonials__item">
+                    <p>
+                        ​The later units of the course (Mitigating Climate Change, Discourse about Climate Change, and
+                        Service and Social Action) have begun to reshape my thinking about what I can do as an
+                        individual, as a member of a community of faith, and as a member of the greater society to work
+                        to address the climate crisis.
+                    </p>
+                    <div class="testimonials__autor">
+                        <div class="testimonials__autor__name">Brad James</div>
+                        <div class="testimonials__autor__city no-mobile">California, Science, Religion, and the Bahá’í
+                            Faith (2019)</div>
+                    </div>
+                </div>
+                <div class="testimonials__item no-mobile no-tablet">
+                    <p>I feel much more hopeful about the future after this course. I learned that there is a way out of
+                        the mess we're in... I was also heartened to learn about the many people in the world
+                        successfully working on these problems in a spirit of global unity.</p>
+                    <div class="testimonials__autor">
+                        <div class="testimonials__autor__name">Mark Johnson</div>
+                        <div class="testimonials__autor__city no-mobile">California, Science, Religion, and the Bahá’í
+                            Faith (2019)</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-wrap">
+        <div class="container">
+            <div class="instructors-block instructors-block_in-courses-university">
+                <div class="instructors-block__title title-h2">Who You’ll Be Learning With</div>
+
+                <div class="instructors-block-body">
+                    <a href="#">
+                        <div class="instructor">
+                            <div class="instructor__img">
+                                <img src="../static/img/dev/instructor.jpg" alt="instructor-img">
+                            </div>
+
+                            <div class="instructor__name title-h3">
+                                Robert H. Stockman
+                            </div>
+
+                            <div class="instructor__position">
+                                <p>Lead Faculty, PhD in Theology </p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="instructor">
+                            <div class="instructor__img">
+                                <img src="../static/img/dev/instructor.jpg" alt="instructor-img">
+                            </div>
+
+                            <div class="instructor__name title-h3">
+                                Robert H. Stockman
+                            </div>
+
+                            <div class="instructor__position">
+                                <p>Lead Faculty, PhD in Theology </p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="instructor">
+                            <div class="instructor__img">
+                                <img src="../static/img/dev/instructor.jpg" alt="instructor-img">
+                            </div>
+
+                            <div class="instructor__name title-h3">
+                                Robert H. Stockman
+                            </div>
+
+                            <div class="instructor__position">
+                                <p>Lead Faculty, PhD in Theology </p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="instructor">
+                            <div class="instructor__img">
+                                <img src="../static/img/dev/instructor.jpg" alt="instructor-img">
+                            </div>
+
+                            <div class="instructor__name title-h3">
+                                Robert H. Stockman
+                            </div>
+
+                            <div class="instructor__position">
+                                <p>Lead Faculty, PhD in Theology </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <a href="#" class="btn">Meet Our Diverse Faculty</a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-wrap">
+        <div class="container">
+            <div
+                class="img-txt img-txt_yellow img-txt_left img-txt_bg-rotated img-txt_in-com-learning img-txt_support-in-learning-page">
+                <div class="flex-bl flex-align-center">
+                    <div class="block-1">
+                        <div class="img-txt__title title-h1 img-txt__title-mob no-desktop no-tablet">Fees & Tuition Support
+                        </div>
+                        <img class="img-txt__image" src="../static/img/sections/img-txt-5.png" alt="">
+                    </div>
+                    <div class="block-2">
+                        <div class="img-txt__cont">
+                            <div class="img-txt__title title-h1 no-mobile">Fees & Tuition Support</div>
+                            <div class="img-txt__desc">
+                                <p>Fees vary based on the length of the course and whether you’re studying
+                                    on your own (typically $75), for the first time with us ($52), or with a group of
+                                    friends
+                                    ($45,
+                                    plus a $30 group fee). We offer a wide range of automatic discounts for senior citizens,
+                                    students, and Baha'i volunteers, as well as tuition support for anyone who needs it.</p>
+                            </div>
+                            <div class="img-txt__btn mobile-text-center">
+                                <a href="#" class="btn btn_green">Learn More About Fees</a>
+                            </div>
+                            <div class="img-txt__btn m-t-20 mobile-text-center">
+                                <a href="#" class="btn btn_pink-border">About Tuition Support</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="apply-block_background">
+        <div class="apply-block apply-block_in-learning-page">
+            <div class="apply-block__title">
+                <h2>How to Apply</h2>
+            </div>
+            <div class="apply-block__subtitle">
+                <p>
+                    Follow the steps below to apply for our college courses.
+                    <br>
+                    We will assist you at every step of
+                    your application process.
+                </p>
+            </div>
+
+            <div class="apply-block-point apply-block-point_opened no-tablet no-desktop" data-expanded="true">
+                <div class="apply-block-point-header">
+                    <div class="apply-block-point-header__title">For University Students</div>
+                    <div class="apply-block-point-header__arrow"></div>
+                </div>
+
+                <div class="apply-block-point-body">
+                    <div class="apply-block-point-body-section">
+                        <div class="apply-block-point-body__step">1. Discover</div>
+                        <div class="apply-block-point-body__desc">
+                            <p>
+                                View our course brochure or online course schedule to choose a course. Don’t see the
+                                course you’d like? Complete an interest form to request a course to be added.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="apply-block-point-body-section">
+                        <div class="apply-block-point-body__step">2. Register</div>
+                        <div class="apply-block-point-body__desc">
+                            <p>
+                                If you can afford to pay by credit card now, click the Register button, complete the
+                                registration form and pay for the course.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="apply-block-point-body-section">
+                        <div class="apply-block-point-body__step">3. Complete Tuition Support Form (if needed) </div>
+                        <div class="apply-block-point-body__desc">
+                            <p>
+                                Check whether you are entitled to the funding options that can help make study more
+                                affordable. Find out more about Tuition support.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="apply-block-point-body-section">
+                        <div class="apply-block-point-body__step">4. Make a Payment</div>
+                        <div class="apply-block-point-body__desc">
+                            <p>
+                                Registrar will contact you the week before the course to arrange the credit card
+                                payment/down payment, and send you a receipt/login instructions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="apply-block-point-body-section">
+                        <div class="apply-block-point-body__step">5. Start Your Course</div>
+                        <div class="apply-block-point-body__desc">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+            <div class="apply-block-point apply-block-point_closed no-tablet no-desktop" data-expanded="false">
+                <div class="apply-block-point-header">
+                    <div class="apply-block-point-header__title">For Institutions</div>
+                    <div class="apply-block-point-header__arrow"></div>
+                </div>
+
+                <div class="apply-block-point-body">
+
+                    <div class="apply-block-point-body-section">
+                        <div class="apply-block-point-body__step">1. Discover</div>
+                        <div class="apply-block-point-body__desc">
+                            <p>
+                                View our course brochure or online course schedule to choose a course. Don’t see the
+                                course you’d like? Complete an interest form to request a course to be added.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="apply-block-point-body-section">
+                        <div class="apply-block-point-body__step">2. Register</div>
+                        <div class="apply-block-point-body__desc">
+                            <p>
+                                If you can afford to pay by credit card now, click the Register button, complete the
+                                registration form and pay for the course.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="apply-block-point-body-section">
+                        <div class="apply-block-point-body__step">3. Complete Tuition Support Form (if needed) </div>
+                        <div class="apply-block-point-body__desc">
+                            <p>
+                                Check whether you are entitled to the funding options that can help make study more
+                                affordable. Find out more about Tuition support.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="apply-block-point-body-section">
+                        <div class="apply-block-point-body__step">4. Make a Payment</div>
+                        <div class="apply-block-point-body__desc">
+                            <p>
+                                Registrar will contact you the week before the course to arrange the credit card
+                                payment/down payment, and send you a receipt/login instructions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="apply-block-point-body-section">
+                        <div class="apply-block-point-body__step">5. Start Your Course</div>
+                        <div class="apply-block-point-body__desc">
+                            <p></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            -->
+           
+            <div class="apply-block-switch no-mobile">
+                <div class="apply-switch apply-block-switch__title title-h2 active" data-switch="one"
+                    data-active="true">
+                    For University Students
+                </div>
+                
+                <!--
+                <div class="apply-switch apply-block-switch__title title-h2" data-switch="two" data-active="false">
+                    For Institutions
+                </div>
+                -->
+            </div>
+
+            <div data-switch="one" class="apply-switch-body apply-block-body active no-mobile">
+                <div class="apply-block-body-section">
+                    <div class="apply-block-body-section__step title-h2">1. Discover</div>
+
+                    <div class="apply-block-body-section__desc">
+                        <P>
+                            Browse the courses and choose one that’s open for registration.
+                        </P>
+                    </div>
+                </div>
+
+                <div class="apply-block-body-section">
+                    <div class="apply-block-body-section__step title-h2">2. Register</div>
+
+                    <div class="apply-block-body-section__desc">
+                        <P>
+                            If you can afford to pay by credit card now, click the Register button, complete the
+                            registration form and pay for the course.
+                        </P>
+                    </div>
+                </div>
+
+                <div class="apply-block-body-section">
+                    <div class="apply-block-body-section__step title-h2">3. Complete Tuition Support Form (if needed)
+                    </div>
+
+                    <div class="apply-block-body-section__desc">
+                        <P>
+                            Check whether you are entitled to the funding options that can help make study more
+                            affordable. Find out more about Tuition support.
+                        </P>
+                    </div>
+                </div>
+
+                <div class="apply-block-body-section">
+                    <div class="apply-block-body-section__step title-h2">4. Make a Payment</div>
+
+                    <div class="apply-block-body-section__desc">
+                        <P>
+                            Registrar will contact you the week before the course to arrange the credit card
+                            payment/down payment, and send you a receipt/login instructions.
+                        </P>
+                    </div>
+                </div>
+
+                <div class="apply-block-body-section">
+                    <div class="apply-block-body-section__step title-h2">5. Start Your Course</div>
+                </div>
+
+            </div>
+
+            <!--
+            <div data-switch="two" class="apply-switch-body apply-block-body hidden no-mobile">
+                <div class="apply-block-body-section">
+                    <div class="apply-block-body-section__step title-h2">1. Discover</div>
+
+                    <div class="apply-block-body-section__desc">
+                        <P>
+                            Browse the courses and choose one that’s open for registration.
+                        </P>
+                    </div>
+                </div>
+
+                <div class="apply-block-body-section">
+                    <div class="apply-block-body-section__step title-h2">2. Register</div>
+
+                    <div class="apply-block-body-section__desc">
+                        <P>
+                            If you can afford to pay by credit card now, click the Register button, complete the
+                            registration form and pay for the course.
+                        </P>
+                    </div>
+                </div>
+
+                <div class="apply-block-body-section">
+                    <div class="apply-block-body-section__step title-h2">3. Complete Tuition Support Form (if needed)
+                    </div>
+
+                    <div class="apply-block-body-section__desc">
+                        <P>
+                            Check whether you are entitled to the funding options that can help make study more
+                            affordable. Find out more about Tuition support.
+                        </P>
+                    </div>
+                </div>
+
+                <div class="apply-block-body-section">
+                    <div class="apply-block-body-section__step title-h2">4. Make a Payment</div>
+
+                    <div class="apply-block-body-section__desc">
+                        <P>
+                            Registrar will contact you the week before the course to arrange the credit card
+                            payment/down payment, and send you a receipt/login instructions.
+                        </P>
+                    </div>
+                </div>
+
+                <div class="apply-block-body-section">
+                    <div class="apply-block-body-section__step title-h2">5. Start Your Course</div>
+                </div>
+            </div>
+            -->
+        </div>
+    </div>
+
+    <div class="faq-block_background faq-block_in-courses-university">
+        <div class="container">
+            <div class="faq-block">
+                <div class="faq-block__title title-h2">FAQs</div>
+
+                <div class="faq-block__item">
+                    <h2>How long is the course?</h2>
+                    <p>
+                        The standard course is 7 weeks long, although some courses are shorter (2–4 weeks), and some,
+                        longer (8–10 weeks). This does not include the Grace Period (usually one month), which can be
+                        used to catch up or to work on your final project (which can be a devotional program, a
+                        presentation, an artistic project, a PowerPoint slide presentation, a research project or paper,
+                        or a community project that uses information from your course materials).
+                    </p>
+                </div>
+
+                <div class="faq-block__item">
+                    <h2>When does a course start?</h2>
+                    <p>
+                        Courses are spread out throughout the year. To browse a list of current and upcoming courses,
+                        use the online Course Schedule. Some course are available all year round. We call these courses
+                        “365” courses because you can sign up and start studying any time, 24 hours a day, 7 days a
+                        week, 365 days a year.
+                    </p>
+                </div>
+
+                <a href="#" class="btn btn_green">View All College Course FAQs</a>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-wrap">
+        <div class="container">
+            <div class="partnership partnership_in-courses-for-university">
+                <div class="partnership__title title-h2">Partner with us</div>
+
+                <div class="partnership__link">
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__nav">
+            <div class="container">
+                <div class="flex-bl flex-justify-btw">
+                    <nav class="footer__list">
+                        <div class="footer__list__head title">About <br>Wilmette <span
+                                class="no-tablet">Institute</span></div>
+                        <ul>
+                            <li><a href="./about_us.html" class="footer__link">About WI</a></li>
+                            <li><a href="#" class="footer__link">About Baha’i Faith</a></li>
+                            <li><a href="#" class="footer__link">What We Offer</a></li>
+                            <li><a href="#" class="footer__link">For College + Universities</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="footer__list">
+                        <div class="footer__list__head title">Learning <br>with Us</div>
+                        <ul>
+                            <li><a href="#" class="footer__link">Our Courses</a></li>
+                            <li><a href="#" class="footer__link">Learning Guide</a></li>
+                            <li><a href="#" class="footer__link">How to Apply</a></li>
+                            <li><a href="#" class="footer__link">Certificates</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="footer__list">
+                        <div class="footer__list__head title">Need Some <br>Help?</div>
+                        <ul>
+                            <li><a href="#" class="footer__link">FAQs</a></li>
+                            <li><a href="#" class="footer__link">Moodle Help</a></li>
+                            <li><a href="#" class="footer__link">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="footer__list">
+                        <div class="footer__list__head title">Small <br>Print</div>
+                        <ul>
+                            <li><a href="#" class="footer__link">Terms of Service</a></li>
+                            <li><a href="#" class="footer__link">Privacy Policy</a></li>
+                            <li><a href="#" class="footer__link">Cookies</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="flex-bl">
+                    <p class="footer__copy">All Rights Reserved. Wilmette Institute 2020</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social__link">
+                            <span class="icon icon_fb"></span>
+                        </a>
+                        <a href="#" class="footer__social__link">
+                            <span class="icon icon_twitt"></span>
+                        </a>
+                        <a href="#" class="footer__social__link">
+                            <span class="icon icon_insta"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+    <script src="../static/libs/js/jquery.min.js" defer></script>
+    <script src="../static/js/main.js" defer></script>
+    <script src="../static/libs/js/jquery.mCustomScrollbar.concat.min.js" defer></script>
+    <script src="../static/libs/js/slick.min.js" defer></script>
+    <script src="../static/libs/js/jquery.formstyler.min.js" defer></script>
+    <script src="../static/libs/js/jquery.magnific-popup.min.js" defer></script>
+    <script src="../static/libs/js/myscript.js" defer></script>
+</body>
+
+</html>

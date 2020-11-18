@@ -1,0 +1,157 @@
+.articles-videos {
+    &_in-articles-page {
+        margin-top: 56px;        
+    }
+
+    &__title {
+        margin-bottom: 10px;
+
+        h2 {
+            color: #3a3ba4;
+        }
+    }
+
+    &__subtitle {
+        p {
+            font-weight: bold;
+            font-size: $l;
+            max-width: 297px;
+            line-height: 1.5;
+            margin-bottom: 0;
+            color: $col-dark-gray;
+        }
+    }
+
+    .search-page-tags {
+        margin-top: 30px;
+
+        .tag {
+            margin: 0 5px 12px 0;
+        }
+    }
+
+    .search-page__help {
+        margin-top: 9px;
+
+        span {
+            color: #3a3ba4;
+            font-weight: bold;
+            font-family: $muliFont;
+            font-size: $normal;
+            line-height: 1.31;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+    }
+
+    &-result {
+        margin-top: 14px;
+
+        &__link {
+            margin: 32px auto 0;
+            max-width: 228px;
+
+            .btn {
+                width: 100%;
+                //border: 2px solid $col-light-pink;
+                //color: $col-blue;
+
+                &:before {
+                    //border-right: 2px solid $col-light-pink;
+                }
+            }
+        }
+    }
+}
+
+// // // // // TABLET SIZES // // // // //
+
+@include tablet {
+    .articles-videos {
+        &_in-articles-page {
+            margin-top: 74px;
+            
+            .aticle__item {
+                margin-bottom: 24px;
+                width: 352px;
+            }
+        }
+
+        &__title {
+            margin-bottom: 0;
+
+            h2 {
+                font-size: $xxxxxl;
+            }
+        }
+
+        &__subtitle {
+            p {
+                font-size: $xxl;
+                max-width: 599px;
+            }
+        }
+
+        .search-page-tags {
+            margin-top: 20px;
+        }
+
+        .search-page__help {
+            margin-top: 23px;
+
+            span {
+                text-transform: uppercase;
+                font-size: 18px;
+                line-height: normal;
+                letter-spacing: 4.7px;
+            }
+        }
+
+        &-result {
+            margin-top: 13px;
+
+            &__link {
+                margin: 20px auto 0;
+            }
+        }
+    }
+}
+
+// // // // // lAPTOP SIZES // // // // //
+
+@include laptop {
+    .articles-videos {
+        &_in-articles-page {
+            margin-top: 101px;
+            
+            .aticle__item {
+                margin-bottom: 27px;
+                width: 487px;
+            }
+        }
+
+        &__title {
+            margin-bottom: 5px;
+        }
+
+        .search-page-tags {
+            margin-top: 31px;
+
+            .tag {
+                margin: 0 10px 12px 0;
+            }
+        }
+
+        .search-page__help {
+            margin-top: 32px;
+        }
+
+        &-result {
+            margin-top: 22px;
+
+            &__link {
+                margin: 56px auto 0;
+            }
+        }
+    }
+}

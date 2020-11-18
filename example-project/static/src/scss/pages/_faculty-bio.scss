@@ -1,0 +1,433 @@
+.faculty-bio {
+
+    &__banner {
+        position: relative;
+        margin-top: 7px;
+        padding-top: 28px;
+        margin-bottom: 50px;
+
+        &:before {
+            content: '';
+            background-color: #f8f2ed;
+            position: absolute;
+            width: calc(100% - 14px);
+            height: 127px;
+            top: 0;
+            left: 7px;
+            z-index: -1;
+        }
+
+        &__content {
+            text-align: center;
+        }
+
+        &__img-wrapper {
+            width: 207px;
+            height: 207px;
+            padding: 18px;
+            background: url("#{$path-img}pages/faculty/bio-person-bg.png") 100% no-repeat;
+            @include radius(50%);
+            margin: auto;
+        }
+
+        &__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @include radius(50%);
+        }
+
+        &__title {
+            margin-top: 35px;
+            line-height: 1;
+        }
+
+        &__subtitle {
+            font-size: $small;
+            line-height: 3;
+            letter-spacing: 1.14px;
+            color: $col-blue3;
+            text-transform: uppercase;
+            @include bold();
+        }
+
+        &__link {
+            @include flex-display();
+            @include flex-wrap();
+            @include align-items(center);
+            text-align: left;
+            max-width: 240px;
+            margin: 20px auto 5px;
+
+            .icon_tag {
+                width: 33px;
+                min-width: 33px;
+                height: 33px;
+            }
+
+            &_wrapper {
+                padding-left: 15px;
+            }
+        }
+
+        &__socials {
+            margin: 15px auto 0;
+            text-align: left;
+            max-width: 240px;
+
+            &__item {
+
+                &:first-child {
+                    padding-right: 40px;
+                }
+
+                &-text {
+                    padding-left: 15px;
+                    font-size: $normal;
+                    line-height: 1.5;
+                    @include normal();
+                    color: $col-black;
+                    text-transform: capitalize;
+                    text-decoration: underline;
+                }
+            }
+
+            .icon_email {
+                width: 32px;
+                height: 27px;
+            }
+
+            .icon_linkdin {
+                width: 23px;
+                height: 23px;
+            }
+        }
+
+        &__buttons {
+            padding-top: 15px;
+
+            .btn {
+                width: fit-content;
+                min-width: 201px;
+                display: block;
+                margin: 15px auto;
+            }
+
+        }
+    }
+
+    &__info {
+        margin-bottom: 35px;
+
+        &__title {
+            font-size: $normal;
+            line-height: 1.57;
+            color: #33805f;
+            text-transform: uppercase;
+            @include bold();
+            margin-bottom: 15px;
+        }
+
+        &__text p {
+            font-size: $l;
+            line-height: 1.5;
+            letter-spacing: 1.14px;
+            color: $col-dark-gray;
+            @include normal();
+            margin-bottom: 0;
+        }
+    }
+
+    &__articles {
+        margin-bottom: 50px;
+
+        .topic {
+            &__title {
+                margin-bottom: 15px;
+            }
+
+            &__list {
+                &__item {
+                    margin-bottom: 15px;
+
+                    &__icon {
+                        width: 23px;
+                        height: 23px;
+                        margin-top: 7px;
+                    }
+
+                    &__text {
+                        width: calc(100% - 23px);
+                        padding-left: 20px;
+                        font-size: $xl;
+                        line-height: 1.45;
+                        color: $col-dark-gray;
+                        @include bold();
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    &__video {
+        margin-bottom: 30px;
+
+        .video-links_in-web-talk-page {
+            margin-top: 0;
+        }
+
+        .video-link__item__tag {
+            .title-h5 {
+                color: $col-black;
+            }
+        }
+
+        .video-link__item__date {
+            text-transform: uppercase;
+        }
+    }
+
+    &__courses {
+        position: relative;
+        overflow: hidden;
+
+        &:before {
+            content: '';
+            width: 100%;
+            height: 30px;
+            position: absolute;
+            background: #fff;
+            z-index: 1;
+            transform: rotateZ(1deg) translateY(-50%);
+        }
+
+        .wi-courses__title {
+            font-size: 26px;
+        }
+    }
+
+    &__members {
+        margin-bottom: 45px;
+
+        .wi-teachers__item__img-wrapper {
+            background: #e9e9fe;
+            @include transitions();
+            
+            &:hover {
+                background: $col-light-blue2;
+            }
+        }
+
+        .wi-teachers__item {
+            margin-bottom: 35px;
+        }
+    }
+
+    &__breadcrumbs {
+        margin-bottom: 15px;
+
+        .breadcrumbs {
+            @include flex-display();
+            @include flex-wrap(wrap);
+        }
+    }
+
+}
+
+@include tablet() {
+    .faculty-bio {
+
+        &__banner {
+            padding-top: 65px;
+            margin-bottom: 40px;
+
+            &:before {
+                height: 157px;
+            }
+
+            &__content {
+                text-align: left;
+                @include flex-display();
+
+                &_info {
+                    padding-left: 45px;
+                }
+            }
+
+            &__img-wrapper {
+                width: 180px;
+                height: 180px;
+                padding: 20px;
+                margin: inherit;
+            }
+
+            &__title {
+                margin-top: 11px;
+            }
+            
+            &__subtitle {
+                min-height: 42px;
+            }
+
+            &__link {
+                @include flex-display();
+                @include flex-wrap();
+                @include align-items(center);
+                text-align: left;
+                max-width: inherit;
+                margin-top: 18px;
+
+                &_wrapper {
+                    padding-left: 18px;
+                }
+
+                .icon_tag {
+                    width: 33px;
+                }
+            }
+
+            &__socials {
+                margin-top: 15px;
+                max-width: inherit;
+
+                &__item {
+                    &-text {
+
+                    }
+                }
+
+                .icon_email {
+                    width: 32px;
+                    height: 27px;
+                }
+
+                .icon_linkdin {
+                    width: 23px;
+                    height: 23px;
+                }
+            }
+
+            &__buttons {
+                padding-top: 15px;
+
+                .btn {
+                    width: fit-content;
+                    min-width: 144px;
+                    display: inline-block;
+                    margin: 15px 15px 0 0;
+                }
+
+            }
+
+        }
+
+        &__articles {
+            margin-bottom: 70px;
+
+            .topic {
+                &__title {
+                    font-size: $xxxxl;
+                }
+            }
+        }
+
+        &__video {
+            margin-bottom: 40px;
+        }
+
+        &__courses {
+            .wi-courses__title {
+                font-size: 40px;
+            }
+        }
+
+        &__members {
+            margin-bottom: 100px;
+            
+            &__title {
+                font-size: $xxxxl;
+            }
+
+            .faculty-bio__members__list {
+                padding: 0 35px;
+            }
+
+            .wi-teachers__item {
+                margin-bottom: 0;
+            }
+        }
+
+    }
+
+}
+
+@include laptop() {
+    .faculty-bio {
+
+        &__banner {
+            margin-top: 25px;
+            padding-top: 47px;
+
+            &:before {
+                height: 191px;
+                width: calc(100% - 50px);
+                left: 25px;
+            }
+
+            &__content {
+
+                &_info {
+                    padding-left: 70px;
+                    width: 647px;
+                }
+            }
+
+            &__img-wrapper {
+                width: 353px;
+                height: 353px;
+                padding: 31px;
+            }
+            
+            &__subtitle {
+                line-height: 1.5;
+                margin-top: 8px;
+                min-height: 21px;
+            }
+
+            &__title {
+                margin-top: 31px;
+            }
+
+            &__link {
+                margin-top: 48px;
+            }
+        }
+
+        &__video {
+            margin-bottom: 90px;
+        }
+
+        &__courses {
+            .wi-courses {
+                padding-top: 75px;
+            }
+            
+            .wi-courses__title{
+                margin-bottom: 30px;
+            }
+            
+            &:before {
+                height: 50px;
+            }
+        }
+
+        &__members {
+            margin-bottom: 120px;
+
+            .faculty-bio__members__list {
+                padding: 0;
+            }
+        }
+    }
+}

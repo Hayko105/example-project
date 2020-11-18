@@ -1,0 +1,164 @@
+.share-links {
+    &_horizontal {
+        @include flex-display();
+        @include flex-direction(row);
+
+        .share-link {
+            margin-right: 14px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        .scriptlesssocialsharing__buttons { // For beckEnd
+            @include flex-display();
+            @include flex-direction(row);
+
+            .button {
+                margin-right: 14px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    &_vertical {
+        @include flex-display();
+        @include flex-direction(column);
+
+        .share-link {
+            margin-bottom: 14px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .scriptlesssocialsharing__buttons { // For beckEnd
+            @include flex-display();
+            @include flex-direction(column);
+
+            .button {
+                margin-bottom: 14px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.share-link {
+    border: solid 2px #78bea0;
+    @include radius(100px);
+    @include wh(41px, 41px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.scriptlesssocialsharing__buttons { // For beckEnd
+    span {
+        display: none;
+    }
+
+    .button {
+        //border: solid 2px $col-light-blue3;
+        //@include radius(100px);
+        @include wh(41px, 41px);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: relative;
+    }
+
+    .twitter {
+        background-image: url("#{$path-icon}/icon-twitt-green.svg");
+        
+        &:hover {
+            background-image: url("#{$path-icon}/icon-twitt-green-hov.svg");
+        }
+    }
+
+    .facebook {
+        background-image: url("#{$path-icon}icon-fb-green.svg");
+        
+        &:hover {
+            background-image: url("#{$path-icon}/icon-fb-green-hov.svg");
+        }
+    }
+
+    .email {
+        background-image: url("#{$path-icon}icon-email-green.svg");
+        //background-size: 22px 18px;
+        
+        &:hover {
+            background-image: url("#{$path-icon}/icon-email-green-hov.svg");
+        }
+    }
+}
+
+.twitter-link {
+    background-image: url("#{$path-icon}/icon-twitt.svg");
+}
+
+.facebook-link {
+    background-image: url("#{$path-icon}icon-fb.svg");
+}
+
+.mail-link {
+    background-image: url("#{$path-icon}icon-email.svg");
+    background-size: 22px 18px;
+}
+
+// // // // // TABLET SIZE // // // // //
+
+@include tablet {
+    .share-links {
+        &_horizontal {
+            .share-link {
+                margin-right: 13px;
+            }
+
+            .scriptlesssocialsharing__buttons { // For beckEnd
+                .button {
+                    margin-right: 13px;
+                }
+            }
+        }
+
+        &_vertical {
+            .share-link {
+                margin-bottom: 21px;
+            }
+
+            .scriptlesssocialsharing__buttons { // For beckEnd
+                .button {
+                    margin-bottom: 21px;
+                }
+            }
+        }
+    }
+
+    .share-link {
+        @include wh(61px, 61px);
+    }
+
+    .mail-link {
+        background-size: 32px 27px;
+    }
+
+    .scriptlesssocialsharing__buttons { // For beckEnd
+        .button {
+            @include wh(61px, 61px);
+        }
+
+        .email {
+            //background-size: 32px 27px;
+        }
+    }
+}

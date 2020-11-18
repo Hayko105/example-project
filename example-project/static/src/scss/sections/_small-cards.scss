@@ -1,0 +1,284 @@
+.wi-courses{
+
+    &_in-home{
+        margin: 80px 0 55px;
+    }
+
+    &_in-learnig-courses {
+        margin-top: 40px;
+    }
+
+    &_in-courses-university {
+        margin-top: 40px;
+    }
+    
+    &_in-app{
+        margin: 50px 0 110px;
+    }
+
+    &__title{
+        margin-bottom: 22px;
+    }
+
+    .btn {
+        min-width: 187px;
+    }
+
+}
+
+.small-cards {
+    margin-right: -25px;
+    margin-bottom: 51px !important;
+
+    &__item{
+        width: 221px;
+        height: 373px !important;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.21);
+        -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.21);
+        @include radius(9px);
+        overflow: hidden;
+        position: relative;
+        margin-right: 13px;
+        background-color: $col-white;
+        @include flex-basis(221px);
+        @include flex-grow(0);
+        @include flex-shrink(0);
+
+        &:hover {
+            box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.21);
+            -webkit-box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.21);
+        }
+
+        &:focus {
+            box-shadow: 0 4px 8px 0 $col-light-blue2;
+            -webkit-box-shadow: 0 4px 8px 0 $col-light-blue2;
+        }
+        
+        &_disable {
+            pointer-events: none;
+            
+            .small-cards__img {
+                background-color: #f0f0f0;
+            }
+            
+            .small-cards__title {
+                color: #6d6d6d;
+            }
+            
+            .small-cards__date{
+                color: $col-dark-gray;
+            }
+            
+            .small-cards__tag{
+                background-color: #e6e6e6;
+                color: #888888;
+            }
+        }
+    }
+
+    &__img{
+        width: 100%;
+        height: 195px;
+        background-color: #f8f2ed;
+        @include flex-display();
+        @include justify-content(space-between);
+
+        img{
+            width: 203px;
+            height: 172px;
+            margin: auto;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+    }
+
+    &__info{
+        padding: 10px 22px 10px 17px;
+    }
+
+    &__date{
+        @include normal();
+        letter-spacing: 0.8px;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    &__title{
+        line-height: 1.3;
+        max-height: 104px;
+        overflow: hidden;
+    }
+
+    &__tag{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 26px;
+        padding: 0 17px;
+        text-transform: uppercase;
+        letter-spacing: 1.14px;
+        line-height: 27px;
+        @include bold();
+        font-size: $small;
+
+        &_comm{
+            background-color: $col-light-blue3;
+            color: $col-green;
+        }
+        &_univer{
+            background-color: $col-light-orang;
+            color: #725a27;
+        }
+    }
+
+    .slick-dots{
+        bottom: -30px;
+
+        li {
+            margin: 0 6px;
+            width: 12px;
+            height: 12px;
+
+            button{
+                width: 12px;
+                height: 12px;
+                @include radius(50%);
+                background-color: $col-light-blue2;
+                padding: 0;
+
+                &::before{
+                    display: none;
+                }
+            }
+
+            &.slick-active{
+                button {
+                    background-color: $col-blue;
+                }
+            }
+
+        }
+    }
+
+}
+
+
+/*** Tablet ***/
+@include tablet {
+
+    .wi-courses{
+
+        &_in-home{
+            margin: 40px 0 55px;
+        }
+
+        &__title{
+            margin-bottom: 22px;
+        }
+
+        &_in-learnig-courses {
+            margin-top: 35px;
+
+            .btn {
+                min-width: 335px;
+            }
+        }
+
+        &_in-courses-university {
+            margin-top: 35px;
+        }
+        
+        &_in-app{
+            margin: 50px 0 50px;
+        }
+
+    }
+
+    .small-cards {
+        margin-right: 0;
+        margin-bottom: 41px !important;
+
+        &__item{
+            width: 231px;
+            height: 343px !important;
+            margin-right: 0;
+            @include flex-basis(231px);
+            @include flex-grow(0);
+            @include flex-shrink(0);
+
+            &:last-child,
+            &:nth-of-type(3){
+                margin-right: 0;
+            }
+
+            &:nth-of-type(3) ~ div{
+                display: none;
+            }
+        }
+
+        &__title {
+            max-height: 78px;
+        }
+
+        &__info{
+            padding: 10px 17px;
+        }
+    }
+
+}
+
+
+/*** Laptop ***/
+@include laptop {
+
+    .wi-courses{
+
+        &_in-home{
+            margin: 65px 0 60px;
+        }
+
+        &__title{
+            margin-bottom: 30px;
+        }
+
+        &_in-learnig-courses {
+            margin-top: 91px;
+        }
+
+        &_in-courses-university {
+            margin-top: 91px;
+        }
+        
+        &_in-app{
+            margin: 60px 0 70px;
+        }
+    }
+
+    .small-cards {
+        @include justify-content(flex-start);
+        
+        &__item{
+            margin-right: 25px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:nth-of-type(3) ~ div{
+                display: block;
+            }
+            
+            &:nth-of-type(3) {
+                margin-right: 24px;
+            }
+            
+            &:nth-child(4n) {
+                margin-right: 0;
+            } 
+        }
+    }
+
+}

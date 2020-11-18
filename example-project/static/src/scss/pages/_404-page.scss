@@ -1,0 +1,132 @@
+.not-found-page {
+    margin-top: 9px;
+    padding: 44px 60px 48px 63px;
+    text-align: center;
+
+    &_background {
+        background-color: #f8f2ed;
+    }
+
+    &__img {
+        @include wh(204px, 135px);
+        margin: auto;
+
+        img {
+            @include wh(100%, 100%);
+        }
+    }
+
+    &__title {
+        margin: 20px auto 25px;
+        max-width: 221px;
+
+        h2 {
+            color: #3b3ba2;
+            line-height: 1;
+            font-size: $xxxl;
+        }
+    }
+
+    &__desc {
+        padding: 5px 0 15px;
+
+        p {
+            line-height: 1.5;
+            font-size: $l;
+            font-weight: bold;
+        }
+
+        a {
+            font-weight: bold;
+            color: $col-black;
+            text-decoration: underline;
+
+            &:last-child {
+                margin-left: 15px;
+            }
+        }
+    }
+
+    &__link {
+        max-width: 206px;
+        margin: 32px auto 0;
+
+        .btn {
+            width: 100%;
+
+            &:before {
+                background-color: #f8f2ed;
+            }
+        }
+    }
+}
+
+// // // // // TABLET SIZES // // // // //
+
+@include tablet {
+    .not-found-page {
+        margin-top: 10px;
+        padding: 36px 106px 84px;
+
+        &__img {
+            @include wh(402px, 266px);
+        }
+
+        &__title {
+            margin: 15px auto 10px;
+            max-width: 539px;
+
+            h2 {
+                font-size: $xxxxxl;
+                color: $col-blue;
+            }
+        }
+
+        &__desc {
+            padding: 10px 0;
+
+            p {
+                font-size: $xxl;
+                margin-bottom: 10px;
+            }
+
+            a {
+                font-size: $xxl;
+
+                &:last-child {
+                    margin-left: 30px;
+                }
+            }
+        }
+
+        &__link {
+            margin: 26px auto 0;
+        }
+    }
+}
+
+// // // // // LAPTOP SIZES // // // // //
+
+@include laptop {
+    .not-found-page {
+        margin-top: 23px;
+        padding: 54px 40px 94px;
+
+        &__img {
+            @include wh(502px, 332px);
+        }
+
+        &__title {
+            margin: 35px auto 25px;
+            max-width: 790px;
+        }
+
+        &__desc {
+            padding: 10px 0;
+        }
+
+        &__link {
+            margin: 39px auto 0;
+        }
+    }
+}

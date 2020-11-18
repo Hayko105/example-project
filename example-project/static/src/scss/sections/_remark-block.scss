@@ -1,0 +1,197 @@
+.remark-block {
+    @include flex-display();
+    @include align-items(center);
+    @include flex-wrap(wrap);
+
+    &_about-us {
+        margin-top: 8px;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    &_background {
+        background: url("#{$path-img}/bg-imgs/remark-block/purple-bg-mobile.png")
+            center top no-repeat;
+        background-size: 100% 100%;
+    }
+
+    &__main {
+        @include flex-display();
+        @include align-items(center);
+        @include justify-content(center);
+        @include flex-wrap(wrap);
+        text-align: center;
+        padding: 44px 0 12px;
+        margin-bottom: 14px;
+        border-bottom: 2px solid #f9c3dc;
+
+        &-img {
+            @include flex-display();
+            @include align-items(center);
+            @include justify-content(center);
+            @include wh(93px, 52px);
+
+            img {
+                @include wh(100%, 100%);
+            }
+        }
+
+        &-remark {
+            margin: 20px auto 5px;
+
+            h2 {
+                @include h1();
+                color: $col-white;
+                line-height: 1;
+            }
+        }
+
+        &-author {
+            span {
+                @include h2();
+                color: #bbbbff;
+            }
+        }
+    }
+
+    &__desc {
+        padding-bottom: 64px;
+        text-align: center;
+
+        p {
+            @include h4();
+            line-height: 1.5;
+            color: $col-white;
+        }
+    }
+}
+
+// // // // // TABLET SIZES // // // // //
+
+@include tablet {
+    .remark-block {
+        @include flex-wrap(nowrap);
+        @include align-items(center);
+        @include justify-content(space-between);
+        padding: 76px 37px 86px;
+
+        &_about-us {
+            margin-top: 6px;
+        }
+
+        &_background {
+            background: url("#{$path-img}/bg-imgs/remark-block/purple-bg-tablet.png")
+                center center no-repeat;
+            background-size: 100% 100%;
+        }
+
+        &__main {
+            width: 50%;
+            text-align: left;
+            @include flex-direction(column);
+            @include align-items(flex-start);
+            margin: 0;
+            padding: 0;
+            border-bottom: none;
+            border-right: 2px solid #f9c3dc;
+
+            &-remark {
+                margin: 18px auto 7px;
+
+                h2 {
+                    font-size: $xxxxl;
+                }
+            }
+
+            &-img {
+                @include wh(112px, 63px);
+            }
+
+            &-remark,
+            &-author {
+                max-width: 241px;
+                margin-left: 0;
+            }
+            
+            &-author { 
+                text-align: right;
+                width: 241px;
+            }
+        }
+
+        &__desc {
+            text-align: left;
+            margin-right: 20px;
+            width: 50%;
+            padding: 0;
+            max-width: 241px;
+        }
+    }
+}
+
+// // // // // LAPTOP SIZES // // // // //
+
+@include laptop {
+    .remark-block {
+        padding: 100px 0 136px;
+
+        &_about-us {
+            margin-top: 20px;
+        }
+
+        &_background {
+            background-image: url("#{$path-img}/bg-imgs/remark-block/purple-bg-desktop.png");
+        }
+
+        &__main {
+            width: 54%;
+            border-right: none;
+
+            &-remark {
+                margin: 31px auto 18px;
+                margin-left: 0;
+
+                h2 {
+                    font-size: $xxxxxl;
+                    line-height: 0.9;
+                }
+            }
+
+            &-remark,
+            &-author {
+                max-width: 484px;
+            }
+            
+            &-author { 
+                width: 484px;
+            }
+        }
+
+        &__desc {
+            max-width: none;
+            width: 46%;
+            border-left: 1px solid #f9c3dc;
+            height: 186px;
+            margin-top: 51px;
+
+            p {
+                margin: 0 0 0 auto;
+                max-width: 403px;
+                font-size: $xxl;
+            }
+        }
+    }
+}
+
+// // // // // DESKTOP SIZES // // // // //
+
+@include desktop {
+    .remark-block {
+        &_about-us {
+            margin-left: 15px;
+            margin-right: 15px;
+            width: auto;
+        }
+    }
+}

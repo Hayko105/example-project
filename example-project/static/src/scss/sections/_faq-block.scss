@@ -1,0 +1,178 @@
+.faq-block {
+    padding: 34px 0 49px;
+
+    &_in-learning-page {
+        margin-top: 45px;
+    }
+
+    &_background {
+        background: url("#{$path-img}/bg-imgs/faq-block/red-bg-mobile.png")
+            center top no-repeat;
+        background-size: 100% 100%;
+
+        .container {
+            padding: 0 15px;
+        }
+    }
+
+    &_in-courses-university {
+        margin-top: 0;
+        background-color: #f0f0f0;
+    }
+
+    &__title {
+        color: $col-white;
+        line-height: 1;
+        margin-bottom: 10px;
+    }
+
+    &__item {
+        width: 100%;
+        padding: 47px 26px 39px;
+        background-color: #feebe8;
+        @include radius(8px);
+        position: relative;
+        margin-bottom: 25px;
+
+        &:before {
+            content: "";
+            @include wh(22px, 9px);
+            background: url("#{$path-icon}icon-faq.svg") center no-repeat;
+            background-size: 100% 100%;
+            position: absolute;
+            left: 26px;
+            top: 30px;
+        }
+
+        h2 {
+            font-family: $muliFont;
+            font-size: $l;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+    }
+
+    &__link {
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn {
+        margin-top: 13px;
+        
+        &:before {
+            background-color: #fa5132;
+        }
+    }
+}
+
+// // // // // TABLET SIZES // // // // //
+
+@include tablet {
+    .faq-block {
+        padding: 68px 0 54px;
+        @include flex-display();
+        @include flex-wrap(wrap);
+        @include justify-content(space-between);
+        
+        &_background {
+            background: url("#{$path-img}/bg-imgs/faq-block/red-bg-tablet.png")
+                center top no-repeat;
+            background-size: 100% 100%;
+
+            .container {
+                padding: inherit;
+            }
+        }
+
+        &__title {
+            width: 100%;
+            font-size: $xxxxl;
+            margin-bottom: 26px;
+        }
+
+        &__item {
+            width: 336px;
+            padding: 47px 26px 39px;
+            margin-bottom: 0;
+
+            &:before {
+                content: "";
+                @include wh(28px, 11px);
+                left: 26px;
+                top: 30px;
+            }
+
+            h2 {
+                font-size: $xxl;
+                line-height: 1.21;
+                margin-bottom: 18px;
+            }
+        }
+        
+        &__link {
+            text-align: inherit;
+        }
+
+        .btn {
+            margin-top: 27px;
+            width: auto;
+            min-width: 251px;
+        }
+    }
+}
+
+// // // // // LAPTOP SIZES // // // // //
+
+@include laptop {
+    .faq-block {
+        padding: 80px 0;
+
+        &_in-learning-page {
+            margin-top: 99px;
+        }
+
+        &_background {
+            background: url("#{$path-img}/bg-imgs/faq-block/red-bg-desktop.png")
+                center top no-repeat;
+            background-size: 100% 100%;
+        }
+
+        &__title {
+            margin-bottom: 14px;
+        }
+
+        &__item {
+            width: 486px;
+            padding: 86px 44px 39px;
+
+            &:before {
+                @include wh(32px, 12px);
+                top: 70px;
+                left: 44px;
+            }
+
+            h2 {
+                line-height: normal;
+                margin-bottom: 21px;
+            }
+        }
+
+        .btn {
+            margin-top: 25px;
+            min-width: 358px;
+        }
+        
+        &_in-courses-university{
+            .faq-block{
+                .btn {
+                    min-width: 251px;
+                }
+            }
+        }
+    }
+}

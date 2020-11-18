@@ -1,0 +1,231 @@
+.faqs-block {
+    padding: 42px 20px 30px;
+
+    &_background {
+        background-image: url("#{$path-img}/bg-imgs/apply-block/light-bg-mobile.png");
+        background-size: 100% 100%;
+    }
+
+    &__title {
+        h2 {
+            font-size: $xxxl;
+            color: #3a3ba4;
+        }
+    }
+
+    &-additional {
+        margin: 15px 0 23px;
+        padding-bottom: 12px;
+        border-bottom: solid 2px #6666d2;
+    }
+
+    &__subtitle {
+        p {
+            font-weight: bold;
+            font-size: $l;
+            color: $col-blue;
+            margin-bottom: 0;
+        }
+    }
+
+    &__form {
+        margin-top: 25px;
+
+        .select-styler-faq .jq-selectbox__select {
+            height: auto;
+        }
+
+        .select-styler-faq .jq-selectbox__dropdown {
+            top: calc(100% + 5px);
+        }
+
+        .jq-selectbox__select-text {
+            white-space: normal;
+            line-height: 1.31;
+        }
+
+        .select-styler-faq {
+            margin-bottom: 0;
+
+            .jq-selectbox__select {
+                @include flex-display();
+                @include align-items(center);
+                min-height: 55px;
+            }
+
+            li {
+                white-space: normal;
+                line-height: normal;
+            }
+        }
+    }
+
+    .apply-block-point {
+        margin-top: 13px;
+
+        &-header {
+            padding: 22px 18px 22px 14px;
+
+            &__title {
+                width: 80%;
+                font-size: $normal;
+            }
+
+            &__arrow {
+                @include wh(17px, 17px);
+            }
+        }
+
+        &_opened {
+            .apply-block-point-header {
+                background-color: $col-blue;
+
+                &__title {
+                    color: $col-white;
+                }
+
+                &__arrow {
+                    &:after {
+                        background-color: $col-white;
+                    }
+                }
+            }
+
+            .apply-block-point-body {
+                padding: 16px 13px 23px 16px;
+            }
+        }
+
+        &_closed {
+            background-color: $col-white;
+
+            .apply-block-point-header {
+                &__title {
+                    color: $col-blue;
+                }
+
+                &__arrow {
+                    &:after,
+                    &:before {
+                        background-color: $col-blue;
+                    }
+                }
+            }
+        }
+
+        &-body {
+            &__desc {
+                max-width: none;
+                padding-left: 0;
+
+                P {
+                    line-height: normal;
+                    font-size: $l;
+                    color: $col-blue;
+                    word-break: break-word;
+                }
+            }
+        }
+    }
+}
+
+// // // // // TABLET SIZES // // // // //
+
+@include tablet {
+    .faqs-block {
+        padding: 81px 20px 97px;
+
+        &_in-help-page {
+            margin-top: -15px;
+        }
+
+        &_background {
+            background-image: url("#{$path-img}/bg-imgs/apply-block/light-bg-tablet.png");
+            background-size: 100% 100%;
+        }
+
+        &__title {
+            h2 {
+                font-size: $xxxxxl;
+            }
+        }
+
+        &-additional {
+            @include flex-display();
+            @include justify-content(space-between);
+            @include align-items(center);
+            margin-top: 3px;
+            padding-bottom: 22px;
+        }
+
+        &__subtitle {
+            margin-right: 15px;
+            padding-top: 2px;
+
+            p {
+                @include text-cut-x(282px);
+                font-size: $xxl;
+            }
+        }
+
+        &__form {
+            width: 380px;
+            margin-top: 0;
+        }
+
+        .apply-block-point {
+            &-header {
+                padding: 23px 19px 21px 23px;
+
+                &__arrow {
+                    @include wh(23px, 23px);
+                }
+                
+                &__title{
+                    font-size: $l;
+                }
+            }
+
+            &_opened {
+                .apply-block-point-body {
+                    padding: 25px 33px 17px 24px;
+                }
+            }
+        }
+    }
+}
+
+// // // // // LAPTOP SIZES // // // // //
+
+@include laptop {
+    .faqs-block {
+        padding: 124px 147px 161px 0;
+
+        &_in-help-page {
+            margin-top: -10px;
+        }
+
+        &_background {
+            background-image: url("#{$path-img}/bg-imgs/apply-block/light-bg-desktop.png");
+            background-size: 100% 100%;
+        }
+
+        &__form {
+            width: 100%;
+        }
+
+        .apply-block-point {
+            &_opened {
+                .apply-block-point-body {
+                    padding: 25px 84px 17px 24px;
+                }
+            }
+
+            &-body {
+                &__desc {
+                    max-width: 680px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Wilmette Institute</title>
+    <meta charset="UTF-8">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="../static/img/favicons/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="../static/img/favicons/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="../static/img/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../static/img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="../static/img/favicons/favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileImage" content="../static/img/favicons/mstile-144x144.png">
+    <meta name="msapplication-TileColor" content="#2b5797">
+
+    <!-- apple web app title -->
+    <meta name="application-name" content="Wilmette Institute">
+    <meta name="apple-mobile-web-app-title" content="Wilmette Institute">
+    <meta name="mobile-web-app-capable" content="Wilmette Institute">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../static/img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../static/img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../static/img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../static/img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../static/img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../static/img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../static/img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/img/favicons/apple-touch-icon-152x152.png">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap&subset=latin-ext"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/libs/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="../static/libs/css/jquery.formstyler.css">
+    <link rel="stylesheet" href="../static/libs/css/jquery.formstyler.theme.css">
+    <link rel="stylesheet" href="../static/libs/css/magnific-popup.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container-big">
+            <div class="flex-bl flex-justify-btw flex-align-center">
+                <div class="header__logo">
+                    <a href="/" class="">
+                        <img src="../static/img/logo.svg" alt="Wilmette Institute" class="logo-img logo-main">
+                        <img src="../static/img/logo-wi.svg" alt="Wilmette Institute" class="logo-img logo-small">
+                    </a>
+                </div>
+
+                <nav class="header__nav header_hidden" id="toggle-menu">
+                    <ul>
+                        <li class="no-desktop">
+                            <a href="#" class="header__nav__link header__nav__link_home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__nav__link header__nav__link_active header__nav__link_about">About
+                                Us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__nav__link header__nav__link_courses">Courses for University</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__nav__link header__nav__link_community">Community Courses</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__nav__link header__nav__link_articles">Articles & Videos</a>
+                        </li>
+                        <li class="no-desktop">
+                            <a href="#" class="header__nav__link header__nav__link_help">Help</a>
+                        </li>
+                    </ul>
+
+                    <div class="header__nav__btn no-tablet no-desktop">
+                        <a href="#" class="btn btn_pink btn_active">Sign In</a>
+                    </div>
+                </nav>
+
+                <div class="header__sblock">
+                    <a href="javascript:void(0)" class="header__sbtn js-toggle-header" data-toggle="search"></a>
+                </div>
+
+                <div class="header__signin no-mobile">
+                    <a href="#" class="btn btn_pink btn_active">Sign In</a>
+                </div>
+
+                <div class="header__burger no-desktop">
+                    <a href="javascript:void(0)" class="mobile-burger js-toggle-header" data-toggle="menu"></a>
+                </div>
+
+                <div class="header__search header_hidden" id="toggle-search">
+                    <div class="container-big">
+                        <div class="flex-bl flex-justify-end flex-align-center">
+                            <div class="header__search__block">
+                                <form action="" method="">
+                                    <div class="search-block">
+                                        <input type="text" placeholder="Search for Courses, Articles, Faculty & more…"
+                                            class="search-input">
+                                        <button type="submit" class="search-btn"></button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="">
+                                <a href="javascript:void(0)" class="search-close js-close-search"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- /Header -->
+
+    <div class="container">
+        <div class="articles-videos articles-videos_in-articles-page">
+            <div class="articles-videos__title">
+                <h2>Articles & Videos</h2>
+            </div>
+            <div class="articles-videos__subtitle">
+                <p>We publish webinars, our students' work and news</p>
+            </div>
+            <form  data-action="filter_article">
+                <div class="search-page-tags">
+                    <a data-filter-check data-filter="article" data-value="all" href="#" class="tag active">All</a>
+                    <a data-filter-check data-filter="article" data-value="talks" href="#" class="tag">Web Talks</a>
+                    <a data-filter-check data-filter="article" data-value="courses" href="#" class="tag">Courses</a>
+                    <a data-filter-check data-filter="article" data-value="students" href="#" class="tag">Students Work</a>
+                    <a data-filter-check data-filter="article" data-value="newsletter" href="#" class="tag">Newsletter</a>
+                </div>
+            </form>
+            <div class="search-page__help">
+                <span class="title-h2" data-explore="filter_article">Showing 5 0f 50 Articles</span>
+            </div>
+            <div class="articles-videos-result">
+                <div data-content-wrapper="filter_article" class="article-list flex-bl flex-justify-btw">
+                    <div class="aticle__item">
+                        <a href="#">
+                            <div class="aticle__item__img">
+                                <img src="../static/img/article-img-1.png" alt="wilmette">
+                            </div>
+                            <div class="aticle__item__info">
+                                <div class="aticle__item__tag">
+                                    <div class="title-h3"><span class="icon icon_play m-r-6"></span> WEB TALK</div>
+                                    <div class="aticle__item__date">Jan 31, 2020</div>
+                                </div>
+                                <h5 class="title-h5">Transformative Leadership: Panel Discussion</h5>
+                                <p>Happening on Sunday, February 2, 2020, 2 p.m. Eastern (11 a.m…Pacific, 8 p.m. Western
+                                    European time) - Register now…</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="aticle__item">
+                        <a href="#">
+                            <div class="aticle__item__img">
+                                <img src="../static/img/article-img-2.png" alt="wilmette">
+                            </div>
+                            <div class="aticle__item__info">
+                                <div class="aticle__item__tag">
+                                    <div class="title-h3">NEWSLETTER</div>
+                                    <div class="aticle__item__date">Jan 31, 2020</div>
+                                </div>
+                                <h5 class="title-h5">Transformative Leadership: Panel Discussion</h5>
+                                <p>Happening on Sunday, February 2, 2020, 2 p.m. Eastern (11 a.m…Pacific, 8 p.m. Western
+                                    European time) - Register now…</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="aticle__item">
+                        <a href="#">
+                            <div class="aticle__item__img">
+                                <img src="../static/img/article-img-1.png" alt="wilmette">
+                            </div>
+                            <div class="aticle__item__info">
+                                <div class="aticle__item__tag">
+                                    <div class="title-h3"><span class="icon icon_play m-r-6"></span> WEB TALK</div>
+                                    <div class="aticle__item__date">Jan 31, 2020</div>
+                                </div>
+                                <h5 class="title-h5">Transformative Leadership: Panel Discussion</h5>
+                                <p>Happening on Sunday, February 2, 2020, 2 p.m. Eastern (11 a.m…Pacific, 8 p.m. Western
+                                    European time) - Register now…</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="aticle__item">
+                        <a href="#">
+                            <div class="aticle__item__img">
+                                <img src="../static/img/article-img-2.png" alt="wilmette">
+                            </div>
+                            <div class="aticle__item__info">
+                                <div class="aticle__item__tag">
+                                    <div class="title-h3">NEWSLETTER</div>
+                                    <div class="aticle__item__date">Jan 31, 2020</div>
+                                </div>
+                                <h5 class="title-h5">Transformative Leadership: Panel Discussion</h5>
+                                <p>Happening on Sunday, February 2, 2020, 2 p.m. Eastern (11 a.m…Pacific, 8 p.m. Western
+                                    European time) - Register now…</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="articles-videos-result__link" data-for-action="filter_article">
+                    <a data-pager-more href="#" class="btn btn_pink-border">See Other Articles</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="breadcrumbs breadcrumbs_in-articles-page">
+            <span><a href="./index.html">Home</a></span>
+            <span><a href="./about_us.html">About Us</a></span>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__nav">
+            <div class="container">
+                <div class="flex-bl flex-justify-btw">
+                    <nav class="footer__list">
+                        <div class="footer__list__head title">About <br>Wilmette <span
+                                class="no-tablet">Institute</span></div>
+                        <ul>
+                            <li><a href="./about_us.html" class="footer__link">About WI</a></li>
+                            <li><a href="#" class="footer__link">About Baha’i Faith</a></li>
+                            <li><a href="#" class="footer__link">What We Offer</a></li>
+                            <li><a href="#" class="footer__link">For College + Universities</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="footer__list">
+                        <div class="footer__list__head title">Learning <br>with Us</div>
+                        <ul>
+                            <li><a href="#" class="footer__link">Our Courses</a></li>
+                            <li><a href="#" class="footer__link">Learning Guide</a></li>
+                            <li><a href="#" class="footer__link">How to Apply</a></li>
+                            <li><a href="#" class="footer__link">Certificates</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="footer__list">
+                        <div class="footer__list__head title">Need Some <br>Help?</div>
+                        <ul>
+                            <li><a href="#" class="footer__link">FAQs</a></li>
+                            <li><a href="#" class="footer__link">Moodle Help</a></li>
+                            <li><a href="#" class="footer__link">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="footer__list">
+                        <div class="footer__list__head title">Small <br>Print</div>
+                        <ul>
+                            <li><a href="#" class="footer__link">Terms of Service</a></li>
+                            <li><a href="#" class="footer__link">Privacy Policy</a></li>
+                            <li><a href="#" class="footer__link">Cookies</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="flex-bl">
+                    <p class="footer__copy">All Rights Reserved. Wilmette Institute 2020</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social__link">
+                            <span class="icon icon_fb"></span>
+                        </a>
+                        <a href="#" class="footer__social__link">
+                            <span class="icon icon_twitt"></span>
+                        </a>
+                        <a href="#" class="footer__social__link">
+                            <span class="icon icon_insta"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+    <script src="../static/libs/js/jquery.min.js" defer></script>
+    <script src="../static/js/main.js" defer></script>
+    <script src="../static/libs/js/jquery.mCustomScrollbar.concat.min.js" defer></script>
+    <script src="../static/libs/js/slick.min.js" defer></script>
+    <script src="../static/libs/js/jquery.formstyler.min.js" defer></script>
+    <script src="../static/libs/js/jquery.magnific-popup.min.js" defer></script>
+    <script src="../static/libs/js/myscript.js" defer></script>
+</body>
+
+</html>

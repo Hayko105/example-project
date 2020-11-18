@@ -1,0 +1,260 @@
+.blog-banner {
+    padding: 39px 0 0;
+
+    &_background {
+        position: relative;
+
+        &:before {
+            content: "";
+            background-color: #f8f2ed;
+            @include absolute-center();
+            @include wh(100%, 397px);
+            z-index: -1;
+        }
+    }
+
+    &__title {
+        margin: 20px 0;
+
+        h2, h1 {
+            font-size: $xxxl;
+            line-height: normal;
+        }
+    }
+
+    &-info {
+        &__date {
+            font-size: $l;
+            line-height: 1.5;
+            font-family: $muliFont;
+        }
+
+        &__link {
+            max-width: 196px;
+            margin-top: 12px;
+
+            .btn {
+                width: 100%;
+
+                &:before {
+                    background-color: #f8f2ed;
+                }
+            }
+        }
+    }
+
+    .music-block {
+        margin-top: 12px;
+    }
+
+    &__video {
+        margin-top: 20px;
+
+        .talk-video {
+            height: 147px;
+
+            &__overlay {
+                &:after {
+                    @include wh(38px, 38px);
+                    margin-top: -18px;
+                    margin-left: -18px;
+                    background-size: 34px;
+                }
+
+                &_no-video {
+                    &:after {
+                        content: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__additional {
+        margin-top: 22px;
+
+        &-link {
+            a,
+            p {
+                font-weight: bold;
+                color: $col-dark-gray;
+            }
+
+            a {
+                text-decoration: underline;
+                
+                &:hover {
+                    color: #6666d2;
+                }
+            }
+        }
+    }
+
+    &_in-blog-page {
+        margin-top: 8px;
+    }
+
+    &_in-content-page {
+        margin-top: 8px;
+
+        .blog-banner {
+            padding: 42px 0 30px;
+        }
+
+        &.blog-banner_background {
+            &:before {
+                height: 100%;
+            }
+        }
+    }
+}
+
+// // // // // TABLET SIZES // // // // //
+
+@include tablet {
+    .blog-banner {
+        padding: 56px 0 0;
+
+        &_background {
+            &:before {
+                background-color: $col-white;
+                background-image: url("#{$path-img}/bg-imgs/blog-banner/yellow-bg-tablet.png");
+                background-size: 100% 100%;
+                @include wh(100%, 511px);
+            }
+        }
+
+        &__title {
+            margin: 15px 0 30px;
+
+            h2, h1 {
+                font-size: $xxxxl;
+            }
+        }
+
+        &-info {
+            @include flex-display();
+            @include justify-content(space-between);
+            @include align-items(flex-center);
+
+            &__date {
+                @include align-self(center);
+            }
+
+            &__link {
+                min-width: 196px;
+                margin-top: 0;
+
+                a {
+                    width: 100%;
+                }
+            }
+        }
+
+        .music-block {
+            margin-top: 12px;
+        }
+
+        &__video {
+            margin-top: 24px;
+
+            .talk-video {
+                height: 336px;
+
+                &__overlay {
+                    &:after {
+                        @include wh(94px, 94px);
+                        margin-top: -47px;
+                        margin-left: -47px;
+                        background-size: 90px;
+                    }
+                }
+            }
+        }
+
+        &__additional {
+            margin-top: 15px;
+        }
+
+        &_in-blog-page {
+            margin-top: 9px;
+        }
+
+        &_in-content-page {
+            margin-top: 9px;
+
+            .blog-banner {
+                max-width: 697px;
+                padding: 56px 0 44px;
+            }
+        }
+    }
+}
+
+// // // // // TABLET SIZES // // // // //
+
+@include laptop {
+    .blog-banner {
+        padding: 102px 115px 0;
+
+        &_background {
+            &:before {
+                background-image: url("#{$path-img}/bg-imgs/blog-banner/yellow-bg-desktop.png");
+                background-size: 100% 100%;
+                @include wh(100%, 640px);
+            }
+        }
+
+        &__title {
+            margin: 20px 0;
+
+            h2, h1 {
+                font-size: $xxxxxl;
+            }
+        }
+
+        &-info {
+            &__date {
+                font-size: $xxl;
+            }
+        }
+
+        .music-block {
+            margin-top: 20px;
+        }
+
+        &__video {
+            margin-top: 23px;
+
+            .talk-video {
+                height: 371px;
+
+                &__overlay {
+                    &:after {
+                        @include wh(104px, 104px);
+                        margin-top: -52px;
+                        margin-left: -52px;
+                        background-size: 100px;
+                    }
+                }
+            }
+        }
+
+        &__additional {
+            margin-top: 15px;
+        }
+
+        &_in-blog-page {
+            margin-top: 29px;
+        }
+
+        &_in-content-page {
+            margin-top: 29px;
+
+            .blog-banner {
+                max-width: 799px;
+                padding: 102px 0 71px 115px;
+            }
+        }
+    }
+}

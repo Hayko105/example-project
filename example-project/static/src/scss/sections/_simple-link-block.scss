@@ -1,0 +1,135 @@
+.simple-link-block {
+    margin: 0 auto 62px;
+    text-align: center;
+    max-width: 258px;
+
+    &-container {
+        &.simple-link-block-container_in-help-page {
+            margin-top: 50px;
+        }
+    }
+
+    &__title {
+        h2 {
+            line-height: 1;
+        }
+    }
+
+    &__desc {
+        margin: 10px 0 15px;
+
+        p {
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        margin: auto;
+        min-width: 230px;
+
+        .btn {
+            width: 100%;
+        }
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+// // // // // TABLET SIZES // // // // //
+
+@include tablet {
+    .simple-link-block {
+        margin: 0 15px 0 0;
+        text-align: left;
+        max-width: none;
+        @include flex-display();
+        @include flex-wrap(wrap);
+
+        &-container {
+            &.simple-link-block-container_in-help-page {
+                margin-top: 58px;
+                padding: 0 20px;
+            }
+        }
+
+        &_long {
+            width: 216px;
+
+            .simple-link-block__title {
+                max-width: 180px;
+            }
+        }
+
+        &_medium {
+            width: 209px;
+        }
+
+        &_short {
+            width: 136px;
+
+            .simple-link-block__title {
+                max-width: 122px;
+            }
+        }
+
+        &-container {
+            @include flex-display();
+            @include flex-direction(row);
+            @include justify-content(space-between);
+        }
+
+        &__desc {
+            margin: 5px 0 23px;
+        }
+
+        &__link {
+            margin: auto auto auto 0;
+            min-width: 136px;
+
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// // // // // LAPTOP SIZES // // // // //
+
+@include laptop {
+    .simple-link-block {
+        max-width: none;
+        width: 230px;
+
+        &-container {
+            &.simple-link-block-container_in-help-page {
+                margin-top: 71px;
+                padding: 0 103px 0 0;
+            }
+        }
+
+        &_long,
+        &_medium {
+            .simple-link-block__desc {
+                max-width: 140px;
+            }
+        }
+
+        &_short {
+            .simple-link-block__title,
+            .simple-link-block__desc {
+                max-width: 140px;
+            }
+        }
+
+        &__desc {
+            margin: 10px 0 35px;
+        }
+
+        &__link {
+            width: 100%;
+        }
+    }
+}

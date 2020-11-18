@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Wilmette Institute</title>
+    <meta charset="UTF-8">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="../static/img/favicons/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="../static/img/favicons/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="../static/img/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../static/img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="../static/img/favicons/favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileImage" content="../static/img/favicons/mstile-144x144.png">
+    <meta name="msapplication-TileColor" content="#2b5797">
+
+    <!-- apple web app title -->
+    <meta name="application-name" content="Wilmette Institute">
+    <meta name="apple-mobile-web-app-title" content="Wilmette Institute">
+    <meta name="mobile-web-app-capable" content="Wilmette Institute">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../static/img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../static/img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../static/img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../static/img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../static/img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../static/img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../static/img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/img/favicons/apple-touch-icon-152x152.png">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap&subset=latin-ext"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/libs/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="../static/libs/css/jquery.formstyler.css">
+    <link rel="stylesheet" href="../static/libs/css/jquery.formstyler.theme.css">
+    <link rel="stylesheet" href="../static/libs/css/magnific-popup.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container-big">
+            <div class="flex-bl flex-justify-btw flex-align-center">
+                <div class="header__logo">
+                    <a href="/" class="">
+                        <img src="../static/img/logo.svg" alt="Wilmette Institute" class="logo-img logo-main">
+                        <img src="../static/img/logo-wi.svg" alt="Wilmette Institute" class="logo-img logo-small">
+                    </a>
+                </div>
+
+                <nav class="header__nav header_hidden" id="toggle-menu">
+                    <ul>
+                        <li class="no-desktop">
+                            <a href="#" class="header__nav__link header__nav__link_home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__nav__link header__nav__link_active header__nav__link_about">About
+                                Us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__nav__link header__nav__link_courses">Courses for University</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__nav__link header__nav__link_community">Community Courses</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__nav__link header__nav__link_articles">Articles & Videos</a>
+                        </li>
+                        <li class="no-desktop">
+                            <a href="#" class="header__nav__link header__nav__link_help">Help</a>
+                        </li>
+                    </ul>
+
+                    <div class="header__nav__btn no-tablet no-desktop">
+                        <a href="#" class="btn btn_pink btn_active">Sign In</a>
+                    </div>
+                </nav>
+
+                <div class="header__sblock">
+                    <a href="javascript:void(0)" class="header__sbtn js-toggle-header" data-toggle="search"></a>
+                </div>
+
+                <div class="header__signin no-mobile">
+                    <a href="#" class="btn btn_pink btn_active">Sign In</a>
+                </div>
+
+                <div class="header__burger no-desktop">
+                    <a href="javascript:void(0)" class="mobile-burger js-toggle-header" data-toggle="menu"></a>
+                </div>
+
+                <div class="header__search header_hidden" id="toggle-search">
+                    <div class="container-big">
+                        <div class="flex-bl flex-justify-end flex-align-center">
+                            <div class="header__search__block">
+                                <form action="" method="">
+                                    <div class="search-block">
+                                        <input type="text" placeholder="Search for Courses, Articles, Faculty & more…"
+                                            class="search-input">
+                                        <button type="submit" class="search-btn"></button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="">
+                                <a href="javascript:void(0)" class="search-close js-close-search"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- /Header -->
+
+    <div
+        class="container-margin hero-banner hero-banner_background hero-banner_background-left hero-banner_background-text hero-banner_in-partner-page">
+        <div class="container hero-banner__info hero-banner__info_purple">
+            <h1 class="hero-banner__info-title title-h1">
+                Partner with Us
+            </h1>
+            <h4 class="hero-banner__info-subtitle title-h4">
+                The Wilmette Institute seeks partnerships with like-minded universities, institutes, and organizations
+                working toward the betterment of the world through education.
+            </h4>
+        </div>
+
+        <div class="hero-banner__image">
+            <img src="../static/img/dev/hero-banner/banner.jpg" alt="hero-banner">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="partnership-info-block partnership-info-block_in-partnership-page">
+            <div class="partnership-info-block__image no-mobile">
+                <img src="../static/img/additional/partnership-info-block.png" alt="info-block-img">
+            </div>
+
+            <div class="partnership-info-block-text">
+                <div class="partnership-info-block__title">
+                    <h2>Dynamic Learning Community</h2>
+                </div>
+                <div class="partnership-info-block__desc">
+                    <p>
+                        Over the past twenty five years we have offered our students a holistic pedagogy to social
+                        transformation, utilizing both scientific and spiritual principles through more than 60
+                        continuing education courses annually.
+                    </p>
+
+                    <p>
+                        Our distinguished faculty have extensive experience in their fields of expertise, and draw on
+                        grassroots praxis worldwide.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div
+            class="img-txt img-txt_medium-height img-txt_green img-txt__in-partners-1 img-txt_in-partners-1-partners-page">
+            <div class="flex-bl flex-align-center">
+                <div class="block-1">
+                    <img class="img-txt__image" src="../static/img/sections/img-txt-4.png" alt="">
+                </div>
+                <div class="block-2">
+                    <div class="img-txt__cont">
+                        <div class="img-txt__title title-h2">Enhance Your Institution’s Education Goals</div>
+                        <div class="img-txt__desc">
+                            <p>Your students will benefit from</p>
+                        </div>
+                        <ul class="img-txt__list">
+                            <li>
+                                <p>International cadre of experienced, distinguished faculty</p>
+                            </li>
+                            <li>
+                                <p>Collegial atmosphere and close student follow-up</p>
+                            </li>
+                            <li>
+                                <p>Economical pricing</p>
+                            </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-margin info-list-block_background info-list-block_in-partners-page">
+        <div class="container info-list-block">
+            <div class="info-list-block__title">
+                <h2>What We Teach</h2>
+            </div>
+
+            <div class="info-list-block__subtitle">
+                <p>
+                    Our courses for credit focus on Bahá’í inspired approaches to social transformation, and Bahá’í
+                    history, texts, and teachings.
+                </p>
+            </div>
+
+            <div class="info-list-block-items">
+                <div class="info-list-block__item">
+                    <div class="info-list-block__item-title">
+                        <h2>Social Tranformation Courses</h2>
+                    </div>
+
+                    <ul class="info-list-block__item-list">
+                        <li>
+                            <p>Anti-black Racism in the U.S.</p>
+                        </li>
+                        <li>
+                            <p>Social Change: Bahá’í Approaches</p>
+                        </li>
+                        <li>
+                            <p>Climate Change and Sustainable Development</p>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="info-list-block__item">
+                    <div class="info-list-block__item-title">
+                        <h2>Bahá’í History & Texts Courses:</h2>
+                    </div>
+
+                    <ul class="info-list-block__item-list">
+                        <li>
+                            <p>Interfaith Dialogue & Collaboration</p>
+                        </li>
+                        <li>
+                            <p> A Survey of the Bahá’í Revelation</p>
+                        </li>
+                        <li>
+                            <p>Bahá’í Theology</p>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="info-list-block__link">
+                <a href="#" class="btn btn_yellow">View Courses for University</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div
+            class="img-txt img-txt_large-height img-txt_medium-width img-txt_green img-txt__in-partners-2 img-txt_in-partners-2-partners-page">
+            <div class="flex-bl">
+                <div class="block-1">
+                    <img class="img-txt__image" src="../static/img/sections/img-txt-1.png" alt="">
+                </div>
+                <div class="block-2">
+                    <div class="img-txt__cont">
+                        <div class="img-txt__title title-h1">Our Pedagogy Reflects Our Guiding Principles:</div>
+                        <ul class="img-txt__list">
+                            <li class="img-txt__list__item flex-bl flex-justify-btw">
+                                <span class="icon icon_list-star_green"></span>
+                                <span class="img-txt__list__item__text">
+                                    Human beings are essentially noble; they are capable of building an ever-advancing
+                                    civilization.</span>
+                            </li>
+                            <li class="img-txt__list__item flex-bl flex-justify-btw">
+                                <span class="icon icon_list-star_red"></span>
+                                <span class="img-txt__list__item__text">
+                                    Both science and religion are essential to investigate reality.</span>
+                            </li>
+                            <li class="img-txt__list__item flex-bl flex-justify-btw">
+                                <span class="icon icon_list-star_brown"></span>
+                                <span class="img-txt__list__item__text">
+                                    Systemic problems require a holistic approach to discover lasting solutions.</span>
+                            </li>
+                            <li class="img-txt__list__item flex-bl flex-justify-btw">
+                                <span class="icon icon_list-star_pink"></span>
+                                <span class="img-txt__list__item__text">
+                                    Scholarship does not begin and end with words but combines theory and praxis in
+                                    study, consultation, action and reflection.</span>
+                            </li>
+                            <li class="img-txt__list__item flex-bl flex-justify-btw">
+                                <span class="icon icon_list-star_yellow"></span>
+                                <span class="img-txt__list__item__text">Sustainable social change requires the
+                                    development of human capacity, in order that people
+                                    become the protagonists of their own material and spiritual development.</span>
+                            </li>
+                            <li class="img-txt__list__item flex-bl flex-justify-btw">
+                                <span class="icon icon_list-star_blue"></span>
+                                <span class="img-txt__list__item__text">Universal peace and justice can be realized
+                                    through a planetary consciousness of the oneness of
+                                    humanity and the interconnectedness of the earth and all its inhabitants.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-margin list-block_background list-block_in-partners-page">
+        <div class="container list-block">
+            <div class="list-block__title">
+                <h2>Opportunities for Collaboration</h2>
+            </div>
+
+            <div class="list-block__subtitle">
+                <p>
+                    We welcome mutually beneficial partnerships with institutions across the US that value our
+                    unique and holistic pedagogy
+                </p>
+            </div>
+
+            <ul class="list-block-list">
+                <li class="list-block-list__item">
+                    <div class="list-block-list__item-num"><span>1</span></div>
+                    <div class="list-block-list__item-text">
+                        <p>
+                            Offering courses for your departments and/or prominent guest lecturers in social
+                            sciences
+                            or religious studies
+                        </p>
+                    </div>
+                </li>
+
+                <li class="list-block-list__item">
+                    <div class="list-block-list__item-num"><span>2</span></div>
+                    <div class="list-block-list__item-text">
+                        <p>
+                            Exploring changemaking through research and teaching (eg. conferences, publications, web
+                            talks, and podcasts)
+                        </p>
+                    </div>
+                </li>
+
+                <li class="list-block-list__item">
+                    <div class="list-block-list__item-num"><span>3</span></div>
+                    <div class="list-block-list__item-text">
+                        <p>
+                            Organizing blended courses including community field experience on special issues, such
+                            as youth engagement and activism
+                        </p>
+                    </div>
+                </li>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="support-block support-block_in-partnership">
+            <div class="support-block__img">
+                <img src="../static/img/additional/support.png" alt="support">
+            </div>
+            <div class="support-block-info">
+                <div class="support-block-info__title">
+                    <h2>Let’s Work Together</h2>
+                </div>
+
+                <div class="support-block-info__desc">
+                    <p>
+                        To collaborate and partner with us please contact Robert Stockman, Director
+                    </p>
+                </div>
+
+                <div class="support-block-additional">
+                    <div class="support-block-additional__img no-mobile">
+                        <img src="../static/img/icons/icon-email.svg" alt="email-icon">
+                    </div>
+
+                    <div class="support-block-additional-text">
+                        <div class="support-block-additional__email">
+                            <a href="#">rstockman@wilmetteinstitute.org</a>
+                        </div>
+                        <div class="support-block-additional__phone">
+                            <p>1-847-733-3425</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="breadcrumbs breadcrumbs_in-search-page">
+            <span><a href="./index.html">Home</a></span>
+            <span><a href="./search.html">Partnerships</a></span>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__nav">
+            <div class="container">
+                <div class="flex-bl flex-justify-btw">
+                    <nav class="footer__list">
+                        <div class="footer__list__head title">About <br>Wilmette <span
+                                class="no-tablet">Institute</span></div>
+                        <ul>
+                            <li><a href="./about_us.html" class="footer__link">About WI</a></li>
+                            <li><a href="#" class="footer__link">About Baha’i Faith</a></li>
+                            <li><a href="#" class="footer__link">What We Offer</a></li>
+                            <li><a href="#" class="footer__link">For College + Universities</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="footer__list">
+                        <div class="footer__list__head title">Learning <br>with Us</div>
+                        <ul>
+                            <li><a href="#" class="footer__link">Our Courses</a></li>
+                            <li><a href="#" class="footer__link">Learning Guide</a></li>
+                            <li><a href="#" class="footer__link">How to Apply</a></li>
+                            <li><a href="#" class="footer__link">Certificates</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="footer__list">
+                        <div class="footer__list__head title">Need Some <br>Help?</div>
+                        <ul>
+                            <li><a href="#" class="footer__link">FAQs</a></li>
+                            <li><a href="#" class="footer__link">Moodle Help</a></li>
+                            <li><a href="#" class="footer__link">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="footer__list">
+                        <div class="footer__list__head title">Small <br>Print</div>
+                        <ul>
+                            <li><a href="#" class="footer__link">Terms of Service</a></li>
+                            <li><a href="#" class="footer__link">Privacy Policy</a></li>
+                            <li><a href="#" class="footer__link">Cookies</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="flex-bl">
+                    <p class="footer__copy">All Rights Reserved. Wilmette Institute 2020</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social__link">
+                            <span class="icon icon_fb"></span>
+                        </a>
+                        <a href="#" class="footer__social__link">
+                            <span class="icon icon_twitt"></span>
+                        </a>
+                        <a href="#" class="footer__social__link">
+                            <span class="icon icon_insta"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+    <script src="../static/libs/js/jquery.min.js" defer></script>
+    <script src="../static/js/main.js" defer></script>
+    <script src="../static/libs/js/jquery.mCustomScrollbar.concat.min.js" defer></script>
+    <script src="../static/libs/js/slick.min.js" defer></script>
+    <script src="../static/libs/js/jquery.formstyler.min.js" defer></script>
+    <script src="../static/libs/js/jquery.magnific-popup.min.js" defer></script>
+    <script src="../static/libs/js/myscript.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+import 'whatwg-fetch';
+import 'classlist-polyfill';
+import 'core-js';
+import 'mdn-polyfills/Node.prototype.append';
+import 'mdn-polyfills/Object.entries';
+import 'url-polyfill';
+import 'formdata-polyfill';
+import 'shim-selected-options';
+import 'element-closest-polyfill';

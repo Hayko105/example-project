@@ -1,0 +1,181 @@
+.breadcrumbs {
+
+    &_about-us {
+        margin: 19px 0;
+    }
+
+    &_in-search-page {
+        margin: 45px 0 20px;
+    }
+
+    &_in-articles-page {
+        margin: 110px 0 20px;
+        width: 100%;
+        @include flex-display();
+        @include justify-content(center);
+    }
+
+    &_in-blog-page {
+        margin: 73px 0 20px;
+        display: inline-block;
+        text-align: center;
+    }
+
+    &_in-help-page {
+        margin: 63px 0 25px;
+    }
+
+    &_in-web-talk-page {
+        margin: 72px 0 15px;
+    }
+
+    &_in-contact-page {
+        margin: 58px 0 19px;
+    }
+
+    &_in-not-found-page {
+        margin: 20px 0 25px;
+    }
+    
+    a {
+        &:hover {
+            color: #4b4bb3;
+            text-decoration: underline;
+        }
+    }
+    
+    ul {
+        li{
+            a{
+                &:hover {
+                    color: #4b4bb3 !important;
+                    text-decoration: underline !important;
+                }
+            }
+        }
+    }
+
+    span {
+        position: relative;
+        margin-right: 20px;
+
+        a {
+            line-height: 1.5;
+            font-size: $normal;
+            color: $col-blue4;
+            letter-spacing: normal;
+            @include normal();
+            font-family: $muliFont;
+            
+            &:hover {
+                color: #4b4bb3;
+                text-decoration: underline;
+            }
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            background-color: $col-blue4;
+            @include wh(1px, 13px);
+            @include rotate(15deg);
+            //top: 25%;
+            bottom: 2px;
+            right: -10px;
+            z-index: 9;
+        }
+
+        &:last-child {
+            &:after {
+                content: none;
+            }
+        }
+    }
+}
+
+// // // // TABLET SIZES // // // // //
+
+@include tablet {
+
+    .breadcrumbs {
+
+        &_about-us {
+            margin: 13px 0;
+        }
+
+        &_in-search-page {
+            margin: 50px 0 20px;
+        }
+
+        &_in-articles-page {
+            margin: 50px 0 15px;
+            @include justify-content(flex-start);
+        }
+
+        &_in-blog-page {
+            margin: 82px 0 30px;
+            text-align: left;
+        }
+
+        &_in-help-page {
+            margin: 89px 0 17px;
+        }
+
+        &_in-web-talk-page {
+            margin: 79px 0 20px;
+        }
+
+        &_in-contact-page {
+            margin: 82px 0 18px;
+        }
+
+        &_in-not-found-page {
+            margin: 10px 0 15px;
+        }
+
+    }
+
+}
+
+// // // // LAPTOP SIZES // // // // //
+
+@include laptop {
+
+    .breadcrumbs {
+
+        &_about-us {
+            margin: 25px 0 17px 0;
+        }
+
+        &_in-search-page {
+            margin: 65px 0 20px;
+        }
+
+        &_in-articles-page {
+            margin: 61px 0 21px;
+        }
+
+        &_in-blog-page {
+            margin: 115px 0 10px;
+            max-width: 876px;
+        }
+
+        &_in-help-page {
+            margin: 84px 0 23px;
+        }
+
+        &_in-web-talk-page {
+            margin: 45px 0 20px;
+        }
+
+        &_in-contact-page {
+            margin: 134px 0 25px;
+        }
+
+        &_in-not-found-page {
+            margin: 20px 0 20px;
+        }
+
+    }
+
+}

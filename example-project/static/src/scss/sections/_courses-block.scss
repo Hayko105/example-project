@@ -1,0 +1,177 @@
+.courses-block {
+    padding: 42px 0 38px;
+    text-align: center;
+    width: auto;
+
+    &_background {
+        @include wh(auto, auto);
+        background: url("#{$path-img}/bg-imgs/courses-block/yellow-bg-mobile.png")
+            top center no-repeat;
+        background-size: cover;
+    }
+
+    &-body {
+        margin-top: 19px;
+        @include flex-display();
+        @include align-items(center);
+        @include flex-wrap(wrap);
+        @include justify-content(space-between);
+
+        &-section {
+            width: 100%;
+
+            &__title {
+                max-width: 205px;
+                margin: 0 auto 13px;
+
+                h2 {
+                    @include h2();
+                    @include text-cut-y(2, 48px);
+                    font-stretch: normal;
+                    line-height: 1;
+                }
+            }
+
+            &__desc {
+                p {
+                    font-family: $muliFont;
+                    line-height: 1.5;
+                    color: $col-black;
+                    max-width: 306px;
+                    margin: auto;
+                }
+            }
+
+            &__link {
+                margin-top: 21px;
+
+                .btn {
+                    width: 100%;
+                    color: #1f1f6e;
+
+                    @media (min-width: 360px) {
+                        min-width: 279px;
+                        width: auto;
+                    }
+
+                    &:before {
+                        background-color: #f8f2ed;
+                    }
+                }
+            }
+
+            &:last-child {
+                margin-top: 59px;
+            }
+        }
+    }
+
+    &_about-us {
+        margin-top: 8px;
+    }
+}
+
+// // // // // TABLET SIZES // // // // //
+
+@include tablet {
+    .courses-block {
+        text-align: left;
+        padding: 66px 41px 74px;
+
+        &_background {
+            background-image: url("#{$path-img}/bg-imgs/courses-block/yellow-bg-tablet.png");
+        }
+
+        &__title {
+            font-size: $xxxxxl;
+        }
+
+        &-body {
+            margin-top: 40px;
+            @include align-items(stretch);
+
+            &-section {
+                @include flex-display();
+                @include flex-wrap(wrap);
+                @include flex-direction(column);
+
+                &__body {
+                    @include flex-display();
+                    @include flex-wrap(wrap);
+                    @include flex-grow(1);
+                }
+
+                width: 289px;
+
+                &__title {
+                    max-width: 280px;
+                    margin: 0 0 16px;
+
+                    h2 {
+                        @include text-cut-y(3, 120px);
+                        max-width: 279px;
+                        font-size: $xxxxl;
+                    }
+                }
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                &__link {
+                    margin-top: 33px;
+                    align-self: flex-end;
+                    @include align-self(flex-end);
+
+                    .btn {
+                        min-width: 279px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// // // // // LAPTOP SIZES // // // // //
+
+@include laptop {
+    .courses-block {
+        padding: 98px 0 124px;
+
+        &_background {
+            background-image: url("#{$path-img}/bg-imgs/courses-block/yellow-bg-desktop.png");
+        }
+
+        &-body {
+            margin-top: 26px;
+            @include align-items(stretch);
+
+            &-section {
+                width: 430px;
+
+                &__title {
+                    max-width: 344px;
+
+                    h2 {
+                        @include text-cut-y(2, 80px);
+                        max-width: 344px;
+                    }
+                }
+
+                &__desc {
+                    p {
+                        max-width: none;
+                    }
+                }
+
+                &__link {
+                    margin-top: 32px;
+                }
+            }
+        }
+
+        &_about-us {
+            margin-top: 20px;
+        }
+    }
+}

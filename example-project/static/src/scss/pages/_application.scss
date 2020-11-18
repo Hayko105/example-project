@@ -1,0 +1,323 @@
+.app-banner {
+    background: #f8f2ed;
+    height: 270px;
+    margin: 8px 8px 58px;
+    position: relative;
+    padding-top: 42px;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 49px;
+        height: 100%;
+        background: url(#{$path-img}app-baner-line.png) no-repeat;
+        @include rotate(180deg);
+    }
+    
+    &__info {
+        max-width: 240px;
+    }
+    
+    .title-h3 {
+        color: #6666d2; 
+        margin-bottom: 10px;
+    }
+    
+    .title-h1 {
+        line-height: 1;
+        max-width: 195px;
+        max-height: 78px;
+        overflow: hidden;
+    }
+    
+    &__timer{
+        margin-top: 18px;
+        
+        .icon {
+            width: 17px;
+            margin-right: 11px;
+        }
+        
+        &__item{
+            font-size: $xl;
+            color: #3b3ba2;
+            font-weight: bold;
+            font-family: $elgocFont;
+            @include flex-display();
+            @include align-items(center);
+        }
+        
+        &__date{
+            font-size: $normal;
+            color: #6565d4;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: $muliFont;
+            line-height: 1.25;
+            margin-left: 11px;
+        }
+        
+        .btn{
+            font-family: $muliFont;
+            color: #3b3ba2;
+            min-width: 235px;
+            margin-top: 18px;
+            
+            &::before {
+                background: #f8f2ed;
+            }
+        }
+        
+    }
+    
+    &_form-page {
+        height: 320px;
+        margin-bottom: 20px;
+    }
+    
+    
+}
+
+.app-thanks {
+    margin-bottom: 55px;
+    
+    &__icon{
+        width: 90px;
+        margin: 0 25px 30px 15px;
+    }
+    
+    .title-h1{
+        max-width: 140px;
+        line-height: 1;
+    }
+    
+    .title-h4_mobile{
+        text-align: center;
+        padding: 0 10px;
+    }
+}
+
+.app-form-info{
+    line-height: 1.5;
+    @include normal();
+    margin-bottom: 45px;
+}
+
+.about-talk_in-app{
+    background: #f9f9ff;
+    margin: 0 8px;
+    padding: 35px 0 40px;
+    
+    .about-talk{
+        margin-bottom: 0;
+    }
+    
+    .btn {
+        &:before {
+            background: #f9f9ff;
+        }
+    }
+}
+
+
+/*** Tablet ***/
+@include tablet() {
+    
+    .app-banner {
+        height: 355px;
+        padding-top: 54px;
+        margin: 7px 5px 45px;
+        
+        &::after {
+            left: 0;
+            right: inherit;
+            @include rotate(0deg);
+        }
+        
+        
+        &__info {
+            max-width: inherit;
+            padding-left: 45px;
+        }
+
+        .title-h1 {
+            font-size: $xxxxxl;
+            line-height: 0.9;
+            max-width: 415px;
+            max-height: 150px;
+        }
+        
+        &__timer{
+            margin-top: 30px;
+            @include flex-display();
+            @include align-items(center);
+
+            .icon {
+                width: 32px;
+                margin-right: 25px;
+                margin-top: 5px;
+                float: left;
+            }
+
+            &__item{
+                display: block;
+                min-width: 190px;
+                
+                & + .app-banner__timer__item{
+                    margin-left: 30px;
+                }
+                
+                &:nth-of-type(3){
+                    margin-left: 10px;
+                }
+            }
+
+            &__date{
+                margin-left: 0;
+                display: block;
+                line-height: 1.1;
+            }
+            
+            .btn {
+                margin-top: 0;
+            }
+
+        }
+        
+        &_form-page {
+            margin-bottom: 30px;
+        }
+        
+    }
+    
+    .app-thanks {
+        margin-bottom: 55px;
+        clear: both;
+        
+        &__icon{
+            width: 150px;
+            margin: 0 30px 0 0;
+        }
+        
+        &__info{
+            width: calc(100% - 180px);
+        }
+        
+        .title-h1{
+            font-size: $xxxxxl;
+            max-width: inherit;
+            margin-bottom: 10px;
+        }
+        
+        .title-h4{
+            max-width: 450px;
+            line-height: 1.4;
+        }
+        
+    }
+    
+    .app-form-info{
+        font-size: $l;
+        margin-bottom: 45px;
+        color: $col-dark-gray;
+    }
+    
+    .about-talk_in-app{
+        margin: 0 5px;
+        padding: 45px 0 80px;
+    }
+    
+}
+
+
+/*** Laptop ***/
+@include laptop() {
+    
+    .app-banner {
+        height: 300px;
+        padding-top: 30px;
+        margin: 28px 25px 60px;
+        
+        &::after {
+            width: 144px;
+            background: url(#{$path-img}app-baner-line-desktop.png) right center / cover no-repeat;
+        }
+        
+        &__info {
+            max-width: inherit;
+            padding-left: 190px;
+        }
+        
+        .title-h1{
+            max-width: 760px;            
+        }
+        
+        &__timer{
+            margin-top: 25px;
+            
+            &__item{
+                
+                & + .app-banner__timer__item{
+                    margin-left: 60px;
+                }
+                
+                &:nth-of-type(3){
+                    margin-left: 30px;
+                }
+            }
+        }
+        
+    }
+    
+    .app-thanks {
+        margin-bottom: 75px;
+        
+        &__icon{
+            width: 230px;
+            margin: 0 35px 0 -20px;
+        }
+        
+        &__info{
+            width: calc(100% - 270px);
+            margin-top: 28px;
+        }
+        
+        .title-h4{
+            max-width: 480px;
+        }
+        
+    }
+    
+    .app-form-info{ 
+        max-width: 855px;
+    }    
+    
+    .about-talk_in-app{
+        margin: 0 20px;
+        padding: 60px 0 120px;
+        
+        .about-talk__watch{
+            .title-h2{
+                padding-right: 36%;
+            }
+        }
+    }
+    
+}
+
+
+/*** Desktop ***/
+@include desktop() {
+    
+    .app-banner {
+        
+        &__info {
+            padding-left: 0;
+        }
+                
+    }
+    
+}
